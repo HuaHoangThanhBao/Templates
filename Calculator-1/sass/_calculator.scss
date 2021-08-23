@@ -1,0 +1,115 @@
+.calculator{
+    margin-top: 30px;
+
+    &-main{
+        display: grid;
+        background-color: white;
+        border-radius: 20px;
+        padding: 40px;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 40px;
+    }
+    &-row{
+        margin-bottom: 40px;
+        position: relative;
+        font-size: 20px;
+    }
+    &-heading{
+        font-size: 20px;
+        margin-bottom: 15px;
+    }
+    &-tips{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: 1fr 1fr;
+        grid-gap: 20px;
+    }
+    &-item{
+        font-size: 25px;
+        font-weight: bold;
+        background-color: $very-dark-cyan;
+        color: white;
+        border-radius: 5px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 8px 0;
+        cursor: pointer;
+        &:hover{
+            background-color: $strong-cyan;
+            color: $very-dark-cyan;
+        }
+        &.light{
+            background-color: $strong-cyan;
+            color: $very-dark-cyan;
+        }
+        &.normal{
+            background-color: $light-grayish-cyan;
+            color: $very-dark-cyan;
+        }
+        .custom-inp{
+            border: none;
+            text-align: center;
+            background-color: inherit;
+            color: $very-dark-cyan;
+            &:focus{
+                background-color: inherit;
+            }
+        }
+    }
+    &-total{
+        background-color: $very-dark-cyan;
+        border-radius: 20px;
+        padding: 40px;
+        display: flex;
+        flex-direction: column;
+    }
+    &-unit{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        margin-bottom: 40px;
+        &-left{
+            text-align: left;
+        }
+        &-right{
+            text-align: right;
+            font-size: 45px;
+            font-weight: bold;
+            color: $strong-cyan;
+            line-height: 1;
+        }
+        .calculator-heading{
+            color: $white;
+            margin: 0;
+        }
+        &-txt{
+            font-size: 12px;
+            color: $light-grayish-cyan;
+        }
+    }
+    @media screen and (max-width: 768px) {
+        &-main{
+            grid-template-columns: 1fr;
+            grid-gap: 0;
+        }
+    }
+}
+
+.reset-btn{
+    width: 100%;
+    background-color: $strong-cyan;
+    color: $very-dark-cyan;
+    font-weight: bold;
+    margin-top: auto;
+    &:hover{
+        background-color: $light-grayish-cyan;
+    }
+}
+
+.icon{
+    position: absolute;
+    bottom: 17px;
+    left: 10px;
+    color: $strong-cyan;
+    opacity: .5;
+}

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="./css/app.css">
+  <title>Frontend Mentor | Tip calculator app</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital@0;1&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+  <section class="header">
+    <h1>Splitter</h1>
+  </section>
+  <section class="calculator">
+    <div class="container">
+      <div class="calculator-main">
+        <div class="calculator-bill">
+          <div class="calculator-row">
+            <h3 class="calculator-heading">Bill</h3>
+            <i class="fa fa-dollar icon"></i>
+            <input id="bill-inp" class="calculator-input">
+          </div>
+          <div class="calculator-row">
+            <h3 class="calculator-heading">Select Tip %</h3>
+            <div class="calculator-tips">
+              <div id="five-perc" class="calculator-item">5%</div>
+              <div id="ten-perc" class="calculator-item">10%</div>
+              <div id="fifteen-perc" class="calculator-item light">15%</div>
+              <div id="twenty-perc" class="calculator-item">20%</div>
+              <div id="twenty-five-perc" class="calculator-item">25%</div>
+              <div class="calculator-item normal">
+                <input id="custom-perc" class="custom-inp" type="text" placeholder="Custom">
+              </div>
+            </div>
+          </div>
+          <div class="calculator-row">
+            <h3 class="calculator-heading">Number of People</h3>
+            <i class="fa fa-user icon"></i>
+            <input id="number-of-people-inp"  class="calculator-input">
+          </div>
+        </div>
+        <div class="calculator-total">
+          <div class="calculator-unit">
+            <div class="calculator-unit-left">
+              <h3 class="calculator-heading">Bill</h3>
+              <p class="calculator-unit-txt">/ person</p>
+            </div>
+            <div id="bill-per-txt" class="calculator-unit-right">$0</div>
+          </div>
+          <div class="calculator-unit">
+            <div class="calculator-unit-left">
+              <h3 class="calculator-heading">Total</h3>
+              <p class="calculator-unit-txt">/ person</p>
+            </div>
+            <div id="total-per-txt" class="calculator-unit-right">$0</div>
+          </div>
+          <button class="btn reset-btn">RESET</button>
+        </div>
+      </div>
+    </div>
+  </section>
+  <script src="./js/app.js"></script>
+</body>
+
+</html>

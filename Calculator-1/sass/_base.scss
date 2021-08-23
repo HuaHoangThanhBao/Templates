@@ -1,0 +1,47 @@
+html{
+    font-size: 14px;
+    font-family: 'Space Mono', monospace;
+}
+
+body{
+    background-color: hsl(185, 41%, 84%);
+}
+
+h1{
+    font-size: 35px;
+}
+
+.container{
+    max-width: 1200px;
+    padding: 0 15px;
+    margin: 0 auto;
+}
+
+.btn{
+    border: none;
+    padding: 17px 0;
+    border-radius: 5px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+input{
+    outline: none;
+    display: block;
+    width: 100%;
+    background-color: $light-grayish-cyan;
+    padding: 15px;
+    font-size: 25px;
+    text-transform: uppercase;
+    font-weight: bold;
+    color: $very-dark-cyan;
+    border: 1px solid $white;
+    border-radius: 5px;
+    direction: rtl;
+    transition: border .15s linear;
+
+    &:focus{
+        background-color: $white;
+        border: 1px solid $strong-cyan;
+    }
+}
