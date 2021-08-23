@@ -1,0 +1,106 @@
+body {
+    font-family: $primary-font;
+    font-size: 16px;
+    line-height: 1;
+    color: $gray-light;
+    max-width: 1920px;
+    margin: 0 auto;
+}
+
+section[id]{
+    scroll-margin-top: 20px;
+}
+
+input,
+button,
+textarea,
+select {
+    font-family: $primary-font;
+    font-size: 16px;
+    outline: none;
+    border: 0;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.second-font {
+    font-family: $secondary-font;
+}
+
+.btn {
+    cursor: pointer;
+    outline: none;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-weight: bold;
+    font-size: 16px;
+    font-family: $primary-font;
+    height: 55px;
+    padding-left: 70px;
+    padding-right: 70px;
+    border-radius: 6px;
+    &--primary {
+        background-color: $blue-color;
+    }
+    &--secondary {
+        background-color: transparent;
+        background-image: linear-gradient(90deg, #f475a0, #feac3d);
+    }
+}
+
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: $gray;
+}
+
+a {
+    color: inherit;
+}
+
+.heading {
+    font-size: 36px;
+    line-height: lineH(56, 36);
+    font-weight: 800;
+    font-family: $secondary-font;
+    margin-bottom: 50px;
+}
+
+.title {
+    font-size: 22px;
+    font-weight: 800;
+    font-family: $secondary-font;
+    line-height: lineH(35, 22);
+    margin-bottom: 20px;
+    display: block;
+}
+
+.text {
+    font-size: 18px;
+    line-height: lineH(34, 18);
+}
+
+.text--small {
+    font-size: 14px;
+}
+
+@include maxw(767px){
+    .heading{
+        font-size: 25px;
+        margin-bottom: 20px;
+    }
+    .title{
+        font-size: 20px;
+    }
+    .text{
+        font-size: 16px;
+    }
+}
