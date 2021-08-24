@@ -1,0 +1,83 @@
+.card {
+    padding: 30px;
+    background-image: url(../images/pattern-background-desktop.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    &-header {
+        img {
+            display: block;
+            width: 100%;
+            border-top-left-radius: 20px;
+            border-top-right-radius: 20px;
+        }
+    }
+    &-body {
+        background-color: white;
+        padding: 40px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        border-bottom-left-radius: 20px;
+        border-bottom-right-radius: 20px;
+    }
+    &-heading {
+        color: $dark-blue;
+    }
+    &-caption {
+        font-size: 17px;
+        color: $desaturated-blue;
+        line-height: 1.5;
+        margin-top: 20px;
+        padding: 0 10px;
+    }
+    &-plan {
+        margin-top: 20px;
+        margin-bottom: 30px;
+        padding: 15px;
+        background-color: $very-pale-blue;
+        border-radius: 10px;
+        display: flex;
+        justify-content: space-between;
+    }
+    &-image {
+        width: 50px;
+        height: 50px;
+    }
+    &-annual {
+        display: flex;
+        gap: 0 20px;
+        align-items: center;
+        p {
+            line-height: 2;
+            font-size: 17px;
+            text-align: left;
+            color: $desaturated-blue;
+        }
+    }
+    &-change-btn {
+        opacity: 0.7;
+        transition: opacity 0.2s linear;
+        &:hover {
+            opacity: 1;
+            text-decoration: underline;
+        }
+    }
+    &-payment-btn {
+        background-color: $bright-blue;
+        color: white;
+        opacity: 0.7;
+        transition: opacity 0.2s linear;
+        &:hover {
+            opacity: 1;
+        }
+    }
+    &-cancel-btn {
+        color: $desaturated-blue;
+        transition: color 0.35s linear;
+        &:hover{
+            color: $dark-blue;
+        }
+    }
+}

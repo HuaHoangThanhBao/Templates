@@ -1,0 +1,140 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 14px;
+  font-family: "Red Hat Display", sans-serif;
+}
+
+body {
+  background-color: #e0e8ff;
+  margin: 0 auto;
+}
+
+h1 {
+  font-size: 35px;
+  font-weight: 800;
+}
+
+h2 {
+  font-size: 18px;
+  font-weight: 800;
+}
+
+.container {
+  max-width: 500px;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+
+.btn {
+  border: none;
+  padding: 17px 0;
+  border-radius: 5px;
+  cursor: pointer;
+  color: #3829e0;
+  font-size: 15px;
+  font-weight: bold;
+}
+.btn.inherit {
+  background-color: inherit;
+}
+
+input {
+  outline: none;
+  display: block;
+  width: 100%;
+  padding: 15px;
+  font-size: 25px;
+  text-transform: uppercase;
+  font-weight: bold;
+  border-radius: 5px;
+  direction: rtl;
+  transition: border 0.15s linear;
+}
+.card {
+  padding: 30px;
+  background-image: url(../images/pattern-background-desktop.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+.card-header img {
+  display: block;
+  width: 100%;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+}
+.card-body {
+  background-color: white;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+.card-heading {
+  color: #1f2f56;
+}
+.card-caption {
+  font-size: 17px;
+  color: #7280a7;
+  line-height: 1.5;
+  margin-top: 20px;
+  padding: 0 10px;
+}
+.card-plan {
+  margin-top: 20px;
+  margin-bottom: 30px;
+  padding: 15px;
+  background-color: #f5f7ff;
+  border-radius: 10px;
+  display: flex;
+  justify-content: space-between;
+}
+.card-image {
+  width: 50px;
+  height: 50px;
+}
+.card-annual {
+  display: flex;
+  gap: 0 20px;
+  align-items: center;
+}
+.card-annual p {
+  line-height: 2;
+  font-size: 17px;
+  text-align: left;
+  color: #7280a7;
+}
+.card-change-btn {
+  opacity: 0.7;
+  transition: opacity 0.2s linear;
+}
+.card-change-btn:hover {
+  opacity: 1;
+  text-decoration: underline;
+}
+.card-payment-btn {
+  background-color: #3829e0;
+  color: white;
+  opacity: 0.7;
+  transition: opacity 0.2s linear;
+}
+.card-payment-btn:hover {
+  opacity: 1;
+}
+.card-cancel-btn {
+  color: #7280a7;
+  transition: color 0.35s linear;
+}
+.card-cancel-btn:hover {
+  color: #1f2f56;
+}
+
+/*# sourceMappingURL=app.css.map */
