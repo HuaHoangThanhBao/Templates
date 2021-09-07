@@ -1,0 +1,56 @@
+html{
+    font-size: 16px;
+    font-family: 'Barlow', 'Fraunces', sans-serif;
+}
+
+body{
+    margin: 0 auto;
+}
+
+h1{
+    font-size: 60px;
+    font-weight: 800;
+}
+
+h2{
+    font-size: 35px;
+    font-weight: 800;
+}
+
+h3{
+    font-size: 25px;
+}
+
+.container{
+    max-width: 1200px;
+    //padding: 0 30px;
+    margin: 0 auto;
+}
+
+.btn{
+    border: none;
+    border-radius: 35px;
+    cursor: pointer;
+    //color: $bright-blue;
+    font-size: 15px;
+    font-weight: bold;
+    background-color: inherit;
+}
+
+ul{
+    list-style: none;
+}
+
+
+@media screen and (max-width: 767px){
+    h1{
+        font-size: 40px;
+    }
+}
+
+
+@media screen and (max-width: 467px){
+    h1{
+        font-size: 25px;
+    }
+}

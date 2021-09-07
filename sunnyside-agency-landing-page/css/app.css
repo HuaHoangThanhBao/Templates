@@ -1,0 +1,283 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+  font-family: "Barlow", "Fraunces", sans-serif;
+}
+
+body {
+  margin: 0 auto;
+}
+
+h1 {
+  font-size: 60px;
+  font-weight: 800;
+}
+
+h2 {
+  font-size: 35px;
+  font-weight: 800;
+}
+
+h3 {
+  font-size: 25px;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.btn {
+  border: none;
+  border-radius: 35px;
+  cursor: pointer;
+  font-size: 15px;
+  font-weight: bold;
+  background-color: inherit;
+}
+
+ul {
+  list-style: none;
+}
+
+@media screen and (max-width: 767px) {
+  h1 {
+    font-size: 40px;
+  }
+}
+@media screen and (max-width: 467px) {
+  h1 {
+    font-size: 25px;
+  }
+}
+.hero {
+  background-image: url(../images/desktop/image-header.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center bottom;
+  min-height: 700px;
+}
+.hero__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px 0;
+}
+.hero__header--logo {
+  height: 30px;
+}
+.hero__header--list {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+.hero__header--item {
+  color: white;
+}
+.hero__header--btn {
+  padding: 10px 25px;
+  background-color: white;
+}
+.hero-main {
+  text-align: center;
+  color: white;
+  padding: 50px 0;
+  font-family: "Fraunces", sans-serif;
+}
+@media screen and (min-width: 768px) {
+  .hero__header {
+    padding: 0 20px;
+  }
+  .hero__header--item:last-child {
+    display: none;
+  }
+}
+@media screen and (max-width: 767px) {
+  .hero__header--item:not(:last-child) {
+    display: none;
+  }
+  .hero__header--item:last-child {
+    display: block;
+  }
+}
+
+.card-row {
+  display: flex;
+  width: 100%;
+  flex-wrap: wrap;
+  flex-direction: row;
+}
+.card-row:nth-child(even) {
+  flex-direction: row-reverse;
+}
+.card-item {
+  width: 50%;
+  height: 500px;
+  position: relative;
+  background-color: #fffbf8;
+}
+.card-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.card-item:first-child {
+  display: flex;
+  align-items: center;
+}
+.card-item.non-flex {
+  display: block;
+}
+.card-content {
+  padding: 0 80px;
+}
+.card-content.non-flex {
+  position: absolute;
+  bottom: 20px;
+  text-align: center;
+}
+.card-heading {
+  color: #23303e;
+  font-family: "Fraunces", sans-serif;
+}
+.card-heading.green {
+  color: #25564b;
+  opacity: 0.7;
+}
+.card-heading.blue {
+  color: #19536b;
+  opacity: 0.7;
+}
+.card-text {
+  color: #25564b;
+  line-height: 1.55;
+  padding: 40px 0;
+  font-size: 14px;
+}
+@media screen and (max-width: 767px) {
+  .card-item {
+    width: 100%;
+  }
+  .card-content {
+    padding: 0 20px;
+  }
+}
+
+.testimonial {
+  text-align: center;
+  background-color: #fffbf8;
+  padding: 100px 0;
+}
+.testimonial-wrapper {
+  display: flex;
+  justify-content: center;
+}
+.testimonial-header {
+  background-color: #fffbf8;
+  padding: 40px 0;
+  color: #a7abae;
+  font-family: "Fraunces", sans-serif;
+}
+.testimonial-list {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 1000px;
+}
+.testimonial-item {
+  padding: 20px;
+  width: 33.33%;
+}
+.testimonial-image {
+  height: 75px;
+  width: 75px;
+  border-radius: 50%;
+}
+.testimonial-text {
+  padding: 40px 0;
+  color: #818498;
+}
+.testimonial-caption {
+  padding: 10px 0;
+}
+.testimonial-name {
+  font-weight: bold;
+  font-family: "Fraunces", sans-serif;
+  font-size: 20px;
+  color: #23303e;
+}
+.testimonial-job {
+  font-size: 14px;
+  padding: 7px 0;
+  color: #a7abae;
+}
+@media screen and (max-width: 767px) {
+  .testimonial {
+    padding: 20px;
+  }
+  .testimonial-item {
+    width: 100%;
+  }
+}
+
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+}
+.gallery-item {
+  width: 25%;
+}
+.gallery-image {
+  height: 100%;
+  width: 100%;
+}
+@media screen and (max-width: 767px) {
+  .gallery-item {
+    width: 50%;
+  }
+}
+
+.footer {
+  background-color: #90d4c5;
+  padding: 50px 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  flex-direction: column;
+}
+.footer-header {
+  display: flex;
+  justify-content: center;
+}
+.footer-logo svg path {
+  fill: #458c7e;
+}
+.footer-links {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 20px 0;
+}
+.footer-link {
+  padding: 20px;
+  color: #458c7e;
+  width: 33.33%;
+}
+.footer-social {
+  display: flex;
+  justify-content: center;
+}
+.footer-icon {
+  padding: 0 10px;
+}
+@media screen and (max-width: 767px) {
+  .footer-link {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+/*# sourceMappingURL=app.css.map */

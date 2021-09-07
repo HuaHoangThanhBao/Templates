@@ -1,0 +1,52 @@
+.hero {
+    background-image: url(../images/desktop/image-header.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center bottom;
+    min-height: 700px;
+    &__header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 30px 0;
+        &--logo {
+            height: 30px;
+        }
+        &--list {
+            display: flex;
+            align-items: center;
+            gap: 40px;
+        }
+        &--item {
+            color: white;
+        }
+        &--btn {
+            padding: 10px 25px;
+            background-color: $white;
+        }
+    }
+    &-main {
+        text-align: center;
+        color: white;
+        padding: 50px 0;
+        font-family: "Fraunces", sans-serif;
+    }
+    @media screen and (min-width: 768px) {
+        &__header {
+            padding: 0 20px;
+            &--item:last-child {
+                display: none;
+            }
+        }
+    }
+    @media screen and (max-width: 767px) {
+        &__header {
+            &--item:not(:last-child) {
+                display: none;
+            }
+            &--item:last-child {
+                display: block;
+            }
+        }
+    }
+}

@@ -1,0 +1,54 @@
+.testimonial{
+    text-align: center;
+    background-color: $white-smoke;
+    padding: 100px 0;
+    &-wrapper{
+        display: flex;
+        justify-content: center;
+    }
+    &-header{
+        background-color: $white-smoke;
+        padding: 40px 0;
+        color: $grayish-blue;
+        font-family: 'Fraunces', sans-serif;
+    }
+    &-list{
+        display: flex;
+        flex-wrap: wrap;
+        max-width: 1000px;
+    }
+    &-item{
+        padding: 20px;
+        width: 33.33%;
+    }
+    &-image{
+        height: 75px;
+        width: 75px;
+        border-radius: 50%;
+    }
+    &-text{
+        padding: 40px 0;
+        color: $dark-grayish-blue;
+    }
+    &-caption{
+        padding: 10px 0;
+    }
+    &-name{
+        font-weight: bold;
+        font-family: 'Fraunces', sans-serif;
+        font-size: 20px;
+        color: $very-dark-desaturated-blue;
+    }
+    &-job{
+        font-size: 14px;
+        padding: 7px 0;
+        color: $grayish-blue;
+    }
+    @media screen and (max-width: 767px){
+        padding: 20px;
+        
+        &-item{
+            width: 100%;
+        }
+    }
+}

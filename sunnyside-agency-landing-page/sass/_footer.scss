@@ -1,0 +1,40 @@
+.footer{
+    background-color: $lightCyan;
+    padding: 50px 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    flex-direction: column;
+    &-header{
+        display: flex;
+        justify-content: center;
+    }
+    &-logo{
+        svg path{
+            fill: $darkModerateCyan;
+        }
+    }
+    &-links{
+        display: flex;
+        flex-wrap: wrap;
+        padding: 20px 0;
+    }
+    &-link{
+        padding: 20px;
+        color: $darkModerateCyan;
+        width: 33.33%;
+    }
+    &-social{
+        display: flex;
+        justify-content: center;
+    }
+    &-icon{
+        padding: 0 10px;
+    }
+    @media screen and (max-width: 767px){
+        &-link{
+            width: 100%;
+            text-align: center;
+        }
+    }
+}
