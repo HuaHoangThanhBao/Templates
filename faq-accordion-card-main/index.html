@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <title>Frontend Mentor | FAQ Accordion Card</title>
+  <link rel="stylesheet" href="./css/app.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+  <section class="card">
+    <div class="card-main">
+      <div class="card-column">
+        <div class="card-image"></div>
+        <div class="card-image"></div>
+      </div>
+      <div class="card-column">
+        <h1 class="card-heading">FAQ</h1>
+        <a class="card-toggle">
+          <div class="card-header">
+            <p class="card-title">How many team members can I invite?</p>
+            <img class="card-pointer" src="./images/icon-arrow-down.svg" alt="">
+          </div>
+          <div class="card-content">
+            <div class="card-txt">
+              No more than 2GB.
+            </div>
+          </div>
+        </a>
+        <a class="card-toggle">
+          <div class="card-header">
+            <p class="card-title">How many team members can I invite?</p>
+            <img class="card-pointer" src="./images/icon-arrow-down.svg" alt="">
+          </div>
+          <div class="card-content">
+            <div class="card-txt">
+              No more than 2GB.
+            </div>
+          </div>
+        </a>
+        <a class="card-toggle">
+          <div class="card-header">
+            <p class="card-title">How many team members can I invite?</p>
+            <img class="card-pointer" src="./images/icon-arrow-down.svg" alt="">
+          </div>
+          <div class="card-content">
+            <div class="card-txt">
+              No more than 2GB.
+            </div>
+          </div>
+        </a>
+        <a class="card-toggle">
+          <div class="card-header">
+            <p class="card-title">How many team members can I invite?</p>
+            <img class="card-pointer" src="./images/icon-arrow-down.svg" alt="">
+          </div>
+          <div class="card-content">
+            <div class="card-txt">
+              No more than 2GB.
+            </div>
+          </div>
+        </a>
+        <a class="card-toggle">
+          <div class="card-header">
+            <p class="card-title">How many team members can I invite?</p>
+            <img class="card-pointer" src="./images/icon-arrow-down.svg" alt="">
+          </div>
+          <div class="card-content">
+            <div class="card-txt">
+              No more than 2GB.
+            </div>
+          </div>
+        </a>
+        <a class="card-toggle">
+          <div class="card-header">
+            <p class="card-title">How many team members can I invite?</p>
+            <img class="card-pointer" src="./images/icon-arrow-down.svg" alt="">
+          </div>
+          <div class="card-content">
+            <div class="card-txt">
+              No more than 2GB.
+            </div>
+          </div>
+        </a>
+        <a class="card-toggle">
+          <div class="card-header">
+            <p class="card-title">How many team members can I invite?</p>
+            <img class="card-pointer" src="./images/icon-arrow-down.svg" alt="">
+          </div>
+          <div class="card-content">
+            <div class="card-txt">
+              No more than 2GB.
+            </div>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+</body>
+
+<script>
+  const toggles = document.querySelectorAll('.card-toggle');
+  toggles.forEach((item) => {
+    item.addEventListener('click', function () {
+      if (this.classList.contains('active'))
+        this.classList.remove('active')
+      else this.classList.add('active')
+    })
+  })
+</script>
+
+</html>

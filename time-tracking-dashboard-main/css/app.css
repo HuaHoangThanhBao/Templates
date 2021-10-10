@@ -1,0 +1,248 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 18px;
+  font-family: "Rubik", sans-serif;
+}
+
+body {
+  background-color: #0f1424;
+  margin: 0 auto;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+h1 {
+  font-size: 35px;
+  font-weight: 800;
+}
+
+h2 {
+  font-size: 18px;
+  font-weight: 800;
+}
+
+.container {
+  max-width: 1000px;
+  padding: 0 15px;
+  margin: 0 auto;
+  height: 100%;
+}
+
+a {
+  cursor: pointer;
+}
+
+.btn {
+  border: none;
+  padding: 17px 0;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 15px;
+  font-weight: bold;
+}
+.btn.inherit {
+  background-color: inherit;
+}
+
+input {
+  outline: none;
+  display: block;
+  width: 100%;
+  padding: 15px;
+  font-size: 25px;
+  text-transform: uppercase;
+  font-weight: bold;
+  border-radius: 5px;
+  direction: rtl;
+  transition: border 0.15s linear;
+}
+.card {
+  width: 100%;
+  padding: 50px 0;
+}
+.card-main {
+  color: white;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  height: 400px;
+}
+.card-left {
+  width: 200px;
+  height: 100%;
+}
+.card-right {
+  width: calc(100% - 200px - 20px);
+  height: calc(100% - 20px);
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+.card-report {
+  background-color: #5847eb;
+  padding: 20px;
+  height: 280px;
+  border-radius: 10px;
+}
+.card-daily {
+  padding: 20px;
+  height: calc(100% - 280px);
+}
+.card-box {
+  background-color: #1c1f4a;
+  border-radius: 10px;
+  height: 100%;
+  width: 200px;
+}
+.card-image {
+  width: 70px;
+  height: 70px;
+  margin-bottom: 20px;
+}
+.card-name {
+  font-size: 35px;
+  font-weight: 100;
+}
+.card-link {
+  color: #6f76c8;
+  text-decoration: none;
+  display: block;
+  font-size: 14px;
+  margin-bottom: 15px;
+}
+.card-link:hover {
+  color: white;
+}
+.card-list {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  height: 50%;
+}
+.card-body {
+  padding: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: space-between;
+  height: calc(100% - 40px);
+  border-radius: 10px;
+  margin-top: -20px;
+  background-color: #1c1f4a;
+}
+.card-body:hover {
+  background-color: #6f76c8;
+  cursor: pointer;
+}
+.card-top {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.card-title {
+  font-size: 16px;
+}
+.card-content {
+  width: 100%;
+}
+.card-time {
+  font-size: 50px;
+}
+.card-desc {
+  font-size: 13px;
+}
+@media screen and (max-width: 1000px) {
+  .card-main {
+    height: auto;
+  }
+  .card-left, .card-right, .card-box {
+    width: 100%;
+  }
+  .card-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .card-report {
+    display: flex;
+    gap: 20px;
+    height: auto;
+    align-items: center;
+  }
+  .card-image {
+    margin: 0;
+  }
+  .card-time {
+    font-size: 40px;
+  }
+}
+
+#card-work {
+  background-image: url(/images/icon-work.svg);
+  background-repeat: no-repeat;
+  background-position: 95% -5px;
+  background-size: 70px;
+  height: 60px;
+  background-color: #ff8c66;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+#card-game {
+  background-image: url(/images/icon-play.svg);
+  background-repeat: no-repeat;
+  background-position: 95% -5px;
+  background-size: 70px;
+  height: 60px;
+  background-color: #56c2e6;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+#card-book {
+  background-image: url(/images/icon-study.svg);
+  background-repeat: no-repeat;
+  background-position: 95% -5px;
+  background-size: 70px;
+  height: 60px;
+  background-color: #ff5c7c;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+#card-exercise {
+  background-image: url(/images/icon-exercise.svg);
+  background-repeat: no-repeat;
+  background-position: 95% -5px;
+  background-size: 70px;
+  height: 60px;
+  background-color: #4acf81;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+#card-chat {
+  background-image: url(/images/icon-social.svg);
+  background-repeat: no-repeat;
+  background-position: 95% -5px;
+  background-size: 70px;
+  height: 60px;
+  background-color: #7536d3;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+#card-health {
+  background-image: url(/images/icon-self-care.svg);
+  background-repeat: no-repeat;
+  background-position: 95% -5px;
+  background-size: 70px;
+  height: 60px;
+  background-color: #f1c65b;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+/*# sourceMappingURL=app.css.map */

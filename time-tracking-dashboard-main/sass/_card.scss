@@ -1,0 +1,187 @@
+.card {
+    width: 100%;
+    padding: 50px 0;
+    &-main {
+        color: white;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+        height: 400px;
+    }
+    &-left {
+        width: 200px;
+        height: 100%;
+    }
+    &-right {
+        width: calc(100% - 200px - 20px);
+        height: calc(100% - 20px);
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+    &-report {
+        background-color: $Blue;
+        padding: 20px;
+        height: 280px;
+        border-radius: 10px;
+    }
+    &-daily {
+        padding: 20px;
+        height: calc(100% - 280px);
+    }
+    &-box {
+        background-color: $Dark-blue;
+        border-radius: 10px;
+        height: 100%;
+        width: 200px;
+    }
+    &-image {
+        width: 70px;
+        height: 70px;
+        margin-bottom: 20px;
+    }
+    &-name {
+        font-size: 35px;
+        font-weight: 100;
+    }
+    &-link {
+        color: $Desaturated-blue;
+        text-decoration: none;
+        display: block;
+        font-size: 14px;
+        margin-bottom: 15px;
+
+        &:hover {
+            color: white;
+        }
+    }
+    &-list {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+        height: 50%;
+    }
+    &-body {
+        padding: 20px;
+        display: flex;
+        flex-wrap: wrap;
+        align-content: space-between;
+        height: calc(100% - 40px);
+        border-radius: 10px;
+        margin-top: -20px;
+        background-color: $Dark-blue;
+
+        &:hover{
+            background-color: $Desaturated-blue;
+            cursor: pointer;
+        }
+    }
+    &-top {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+    }
+    &-title {
+        font-size: 16px;
+    }
+    &-content {
+        width: 100%;
+    }
+    &-time {
+        font-size: 50px;
+    }
+    &-desc {
+        font-size: 13px;
+    }
+    @media screen and (max-width: 1000px) {
+        &-main{
+            height: auto;
+        }
+        &-left,
+        &-right,
+        &-box {
+            width: 100%;
+        }
+        &-content {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        &-report {
+            display: flex;
+            gap: 20px;
+            height: auto;
+            align-items: center;
+        }
+        &-image{
+            margin: 0;
+        }
+        &-time {
+            font-size: 40px;
+        }
+    }
+}
+
+#card {
+    &-work {
+        background-image: url(/images/icon-work.svg);
+        background-repeat: no-repeat;
+        background-position: 95% -5px;
+        background-size: 70px;
+        height: 60px;
+        background-color: $Light-red;
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+    }
+    &-game {
+        background-image: url(/images/icon-play.svg);
+        background-repeat: no-repeat;
+        background-position: 95% -5px;
+        background-size: 70px;
+        height: 60px;
+        background-color: $Soft-blue;
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+    }
+    &-book {
+        background-image: url(/images/icon-study.svg);
+        background-repeat: no-repeat;
+        background-position: 95% -5px;
+        background-size: 70px;
+        height: 60px;
+        background-color: $Light-red-study;
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+    }
+    &-exercise {
+        background-image: url(/images/icon-exercise.svg);
+        background-repeat: no-repeat;
+        background-position: 95% -5px;
+        background-size: 70px;
+        height: 60px;
+        background-color: $Lime-green;
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+    }
+    &-chat {
+        background-image: url(/images/icon-social.svg);
+        background-repeat: no-repeat;
+        background-position: 95% -5px;
+        background-size: 70px;
+        height: 60px;
+        background-color: $Violet;
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+    }
+    &-health {
+        background-image: url(/images/icon-self-care.svg);
+        background-repeat: no-repeat;
+        background-position: 95% -5px;
+        background-size: 70px;
+        height: 60px;
+        background-color: $Soft-orange;
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+    }
+}
