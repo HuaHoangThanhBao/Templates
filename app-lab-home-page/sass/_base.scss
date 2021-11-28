@@ -145,3 +145,9 @@ p{
         transform: translate(-50%, -50%);
     }
 }
+
+@include maxw(319px){
+    .btn{
+        padding: 10px 20px;
+    }
+}

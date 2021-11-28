@@ -26,4 +26,9 @@
     @include maxw(1023px){
         background-image: none;
     }
+    @include maxw(767px){
+        &-main{
+            grid-template-columns: 1fr;
+        }
+    }
 }

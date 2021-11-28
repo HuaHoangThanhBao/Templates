@@ -10,6 +10,7 @@
     }
     &-nav{
         display: flex;
+        flex-wrap: wrap;
         gap: 35px;
         justify-content: center;
         margin-bottom: 50px;
@@ -21,5 +22,10 @@
         margin-top: 90px;
         color: $very-dark-blue-inherit;
         font-size: 14px;
+    }
+    @include maxw(767px){
+        &-main{
+            grid-template-columns: 1fr;
+        }
     }
 }

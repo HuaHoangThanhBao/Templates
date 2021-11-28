@@ -52,6 +52,7 @@
     }
     &-box{
         display: flex;
+        flex-wrap: wrap;
         align-items: center;
         gap: 25px;
     }
@@ -120,6 +121,13 @@
         }
         &-main{
             grid-template-columns: repeat(1, 1fr);
+        }
+    }
+    @include maxw(319px){
+        &-col{
+            &:first-child{
+                display: none;
+            }
         }
     }
 }
