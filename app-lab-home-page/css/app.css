@@ -73,6 +73,7 @@ select {
 }
 
 .btn {
+  user-select: none;
   cursor: pointer;
   outline: none;
   border: none;
@@ -86,6 +87,7 @@ select {
 
 a {
   cursor: pointer;
+  user-select: none;
 }
 
 h1,
@@ -848,23 +850,49 @@ p {
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 20px;
 }
 .ask-toggle__title {
   font-size: 20px;
   color: #09142e;
   font-weight: bold;
-  width: 80%;
+  width: calc(100% - 20px);
 }
 .ask-toggle__btn {
-  width: 20%;
+  width: 20px;
   font-size: 35px;
   color: #09142e;
   text-align: right;
+  position: relative;
+}
+.ask-toggle__btn.toggle::before, .ask-toggle__btn.toggle::after {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+.ask-toggle__btn.expand::before {
+  content: "-";
+}
+.ask-toggle__btn.collapse::before {
+  content: "+";
+}
+.ask-toggle__body {
+  transition: opacity 1s ease-out;
+  opacity: 0;
+  height: 0;
+  overflow: hidden;
+}
+.ask-toggle__body.active {
+  margin-top: 20px;
+  opacity: 1;
+  height: auto;
 }
 @media screen and (max-width: 767px) {
   .ask {
     padding: 0 0 50px 0;
+  }
+  .ask-toggle {
+    padding: 25px;
   }
 }
 

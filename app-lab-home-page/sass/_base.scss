@@ -32,6 +32,7 @@ select {
 }
 
 .btn {
+    user-select: none;
     cursor: pointer;
     outline: none;
     border: none;
@@ -45,6 +46,7 @@ select {
 
 a{
     cursor: pointer;
+    user-select: none;
 }
 
 h1,
