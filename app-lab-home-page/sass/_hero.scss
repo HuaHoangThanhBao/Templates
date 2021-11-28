@@ -1,0 +1,72 @@
+.hero {
+    background-image: url("../images/Layer\ 5.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center bottom;
+    position: relative;
+    &-overlay {
+        background-image: url("../images/Layer\ 3.png");
+        background-repeat: no-repeat;
+        background-size: contain;
+    }
+    &-main {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    &-demo {
+        width: 65%;
+        padding: 190px 70px;
+    }
+    &-banner {
+        width: 35%;
+    }
+    &-choice {
+        max-width: 320px;
+        height: 35px;
+        background-color: $very-ligh-gray;
+        color: $dark-blue;
+        align-items: center;
+        display: flex;
+        border-radius: 20px;
+        margin-bottom: 30px;
+
+        & > p {
+            margin-left: 10px;
+            font-weight: 600;
+        }
+    }
+    &-medal {
+        background-color: $yellow;
+        border-radius: 20px;
+        height: 100%;
+        width: 35px;
+        padding: 8px;
+    }
+    &-heading {
+        font-size: 60px;
+        font-weight: bold;
+        line-height: lineH(60, 40);
+        color: $very-dark-blue;
+        margin-bottom: 25px;
+    }
+    &-caption {
+        font-size: 18px;
+        line-height: lineH(28, 18);
+        margin-bottom: 40px;
+    }
+    &-img {
+        height: 100%;
+    }
+    @include maxw(1023px){
+        &-main{
+            flex-direction: column-reverse;
+        }
+        &-demo {
+            width: 100%;
+            padding: 20px 0 50px;
+        }
+        &-banner {
+            width: 100%;
+        }
+    }
+}

@@ -1,0 +1,61 @@
+.feature{
+    padding: 150px 0 50px 0;
+    &-main{
+        display: flex;
+        flex-wrap: wrap;
+        gap: 50px;
+    }
+    &-banner{
+        width: 50%;
+        background-image: url("../images/Group\ 1\ copy.png");
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: center bottom;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-left: -50px;
+    }
+    &-app{
+        width: 50%;
+        padding-right: 150px;
+    }
+    &-heading{
+        font-size: 46px;
+        line-height: lineH(46, 36);
+        margin-bottom: 25px;
+        color: $very-dark-blue;
+    }
+    &-caption{
+        line-height: lineH(26, 16);
+        margin-bottom: 25px;
+        color: $very-dark-blue;
+        margin-bottom: 90px;
+    }
+    &-row{
+        display: flex;
+        align-items: center;
+        gap: 30px;
+        margin-bottom: 60px;
+    }
+    &-group{
+        width: calc(100% - 85px);
+    }
+    &-txt{
+        line-height: lineH(26, 16);
+    }
+    @include maxw(1023px){
+        &-app{
+            padding-right: 50px;
+        }
+    }
+    @include maxw(767px){
+        padding: 50px 0;
+        &-app{
+            width: 100%;
+        }
+        &-banner{
+            width: 100%;
+        }
+    }
+}

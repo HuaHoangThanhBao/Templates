@@ -1,0 +1,56 @@
+.jackpot{
+    padding: 50px 0;
+    &-main{
+        display: flex;
+        flex-wrap: wrap;
+        margin-bottom: 100px;
+    }
+    &-col{
+        width: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        &:first-child{
+            border-right: 1px solid $light-gray;
+            padding: 0 50px 0 0;
+        }
+        &:last-child{
+            padding: 0 0 0 50px;
+        }
+    }
+    &-heading{
+        font-size: 40px;
+        line-height: lineH(50, 40);
+        color: $very-dark-blue;
+        font-weight: bold;
+    }
+    &-txt{
+        line-height: lineH(26, 16);
+    }
+    &-list{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 100px;
+    }
+    .icon{
+        margin-bottom: 20px;
+    }
+    @include maxw(767px){
+        &-main{
+            margin-bottom: 50px;
+        }
+        &-col{
+            width: 100%;
+            &:first-child{
+                border-right: none;
+            }
+            &:last-child{
+                padding: 50px 0 0 0;
+            }
+        }
+        &-list{
+            grid-template-columns: repeat(1, 1fr);
+            gap: 50px;
+        }
+    }
+}

@@ -1,0 +1,29 @@
+.download{
+    padding: 100px 0;
+    background-image: url('../images/Vector\ Smart\ Object\ 5.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center right;
+    &-main{
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+    }
+    &-heading{
+        font-size: 48;
+        line-height: lineH(58, 48);
+        margin-bottom: 40px;
+        color: $very-dark-blue;
+        font-weight: bold;
+    }
+    &-caption{
+        margin-bottom: 50px;
+    }
+    &-group{
+        display: flex;
+        flex-wrap: wrap;
+        gap: 35px;
+    }
+    @include maxw(1023px){
+        background-image: none;
+    }
+}

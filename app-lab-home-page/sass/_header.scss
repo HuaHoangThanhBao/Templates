@@ -1,0 +1,32 @@
+.header{
+    padding: 90px 0 50px 0;
+    &-main{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    &-nav{
+        display: flex;
+        align-items: center;
+        gap: 35px;
+        color: $very-dark-blue;
+    }
+    &-link{
+        &:last-child{
+            display: none;
+        }
+    }
+    &-btn{
+        margin-left: 20px;
+    }
+    @include maxw(1023px){
+        &-link{
+            &:not(:last-child){
+                display: none;
+            }
+            &:last-child{
+                display: block;
+            }
+        }
+    }
+}

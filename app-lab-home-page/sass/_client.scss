@@ -1,0 +1,125 @@
+.client{
+    padding: 150px 0;
+    &-main{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        background-image: url('../images/2000px-World_map_\(blue_dots\).svg.png');
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center left;
+    }
+    &-col{
+        &:first-child{
+            position: relative;
+        }
+        &:last-child{
+            padding-right: 30%;
+        }
+    }
+    &-heading{
+        font-size: 40;
+        line-height: lineH(50, 40);
+        margin-bottom: 30px;
+        color: $very-dark-blue;
+    }
+    &-caption{
+        margin-bottom: 45px;
+    }
+    &-star{
+        display: flex;
+        gap: 8px;
+        & > img {
+            height: 24px;
+            width: 22px;
+        }
+    }
+    &-title{
+        color: $very-dark-blue;
+        font-size: 20;
+        line-height: lineH(58, 20);
+        font-weight: bold;
+        margin-bottom: 10px;
+    }
+    &-say{
+        margin-bottom: 60px;
+    }
+    &-nav{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+    &-box{
+        display: flex;
+        align-items: center;
+        gap: 25px;
+    }
+    &-name{
+        color: $very-dark-blue;
+        font-size: 18;
+        font-weight: bold;
+    }
+    &-btn-group{
+        display: flex;
+        gap: 8px;
+        align-items: center;
+    }
+    a{
+        padding: 20px 18px;
+        border: 1px solid $very-ligh-gray;
+        border-radius: 50%;
+    }
+    &-right-arrow{
+        background-color: $very-ligh-gray;
+    }
+    &-img{
+        position: absolute;
+        &.img1{
+            left: 34%;
+        }
+        &.img2{
+            top: 50%;
+            left: 5%;
+        }
+        &.img3{
+            top: 55%;
+            left: 65%;
+        }
+        &.img4{
+            top: 8%;
+            left: 70%;
+        }
+        &.img5{
+            top: 80%;
+            left: 35%;
+        }
+        &.img6{
+            top: 20%;
+            left: 2%;
+        }
+        &.img7{
+            top: 40%;
+            left: 40%;
+        }
+    }
+    @include maxw(767px){
+        padding-left: 15px;
+        padding-right: 15px;
+        &-main{
+            background-position: top left;
+            gap: 50px;
+        }
+        &-col{
+            &:first-child{
+                height: 600px;
+            }
+            &:last-child{
+                padding: 0;
+            }
+        }
+        &-main{
+            grid-template-columns: repeat(1, 1fr);
+        }
+    }
+}

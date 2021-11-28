@@ -1,0 +1,25 @@
+.footer{
+    padding: 120px 0;
+    background-color: $very-dark-blue;
+    &-main{
+        text-align: center;
+    }
+    &-img{
+        margin: 0 auto;
+        margin-bottom: 50px;
+    }
+    &-nav{
+        display: flex;
+        gap: 35px;
+        justify-content: center;
+        margin-bottom: 50px;
+    }
+    &-link{
+        color: $white;
+    }
+    &-copyright{
+        margin-top: 90px;
+        color: $very-dark-blue-inherit;
+        font-size: 14px;
+    }
+}

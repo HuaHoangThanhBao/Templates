@@ -1,0 +1,33 @@
+.integration{
+    padding: 80px 0;
+    &-main{
+        display: flex;
+        flex-wrap: wrap;
+        gap: 100px;
+        align-items: center;
+    }
+    &-col{
+        width: 50%;
+        &:last-child{
+            width: calc(50% - 150px);
+        }
+    }
+    &-heading{
+        font-size: 36px;
+        line-height: lineH(46, 36);
+        margin-bottom: 30px;
+        color: $very-dark-blue;
+    }
+    &-txt{
+        line-height: lineH(26, 16);
+        margin-bottom: 30px;
+    }
+    @include maxw(767px){
+        &-col{
+            width: 100%;
+            &:last-child{
+                width: 100%;
+            }
+        }
+    }
+}

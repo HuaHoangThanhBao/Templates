@@ -1,0 +1,43 @@
+.choose {
+    padding: 130px 0;
+    &-main {
+        text-align: center;
+    }
+    &-top{
+        max-width: 800px;
+        margin:  0 auto;
+    }
+    &-heading {
+        font-size: 36px;
+        line-height: lineH(46, 36);
+        margin-bottom: 30px;
+        color: $very-dark-blue;
+        font-weight: bold;
+    }
+    &-caption {
+        line-height: lineH(26, 16);
+        margin-bottom: 90px;
+    }
+    &-list {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 85px;
+    }
+    &-item {
+        .icon {
+            margin: 0 auto;
+            margin-bottom: 30px;
+        }
+    }
+    &-title{
+        color: $very-dark-blue;
+        font-size: 20px;
+        line-height: lineH(58, 20);
+    }
+    @include maxw(767px){
+        &-list{
+            grid-template-columns: repeat(1, 1fr);
+            gap: 50px;
+        }
+    }
+}

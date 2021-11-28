@@ -1,0 +1,91 @@
+.charge {
+    padding: 100px 0;
+    text-align: center;
+    &-main {
+        position: relative;
+    }
+    &-heading {
+        font-size: 36px;
+        line-height: lineH(46, 36);
+        margin-bottom: 30px;
+        color: $very-dark-blue;
+    }
+    &-caption {
+        margin-bottom: 80px;
+    }
+    &-option {
+        border: 2px solid $very-ligh-gray;
+        border-radius: 30px;
+        padding: 2px;
+        max-width: 320px;
+        margin: 0 auto;
+        margin-bottom: 35px;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+
+        & > a {
+            padding: 20px 0;
+            border-radius: 30px;
+        }
+        &__monthly {
+            background-color: $blue;
+            color: $white;
+        }
+    }
+    &-group {
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 40px;
+        align-items: start;
+        max-width: 700px;
+    }
+    &-card {
+        border: 2px solid $very-ligh-gray;
+        border-radius: 10px;
+
+        &.shadow {
+            border: none;
+            box-shadow: 15px 10px 28px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.13);
+        }
+
+        &__top {
+            padding: 70px 0;
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+            background: linear-gradient($white, $white-smoke);
+        }
+        &__bottom {
+            padding: 30px 0;
+
+            .btn {
+                margin-top: 10px;
+            }
+        }
+        &__txt {
+            margin-bottom: 30px;
+        }
+        &__price {
+            margin-bottom: 30px;
+
+            .large {
+                font-size: 60px;
+                color: $very-dark-blue;
+                font-weight: bold;
+            }
+        }
+        &__title {
+            font-size: 20px;
+            line-height: lineH(28, 20);
+            color: $very-dark-blue;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+    }
+    @include maxw(767px){
+        &-group{
+            grid-template-columns: repeat(1, 1fr);
+            max-width: 320px;
+        }
+    }
+}

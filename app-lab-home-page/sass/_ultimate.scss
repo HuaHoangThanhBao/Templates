@@ -1,0 +1,79 @@
+.ultimate{
+    background-image: url('../images/ellipse\ 7.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center right;
+    padding: 40px 0;
+    .container{
+        position: relative;
+    }
+    &-main{
+        display: flex;
+        flex-wrap: wrap;
+        gap: 100px;
+    }
+    &-col{
+        &:first-child{
+            width: 50%;
+        }
+        &:last-child{
+            width: 50%;
+            position: relative;
+        }
+    }
+    &-heading{
+        font-size: 36px;
+        line-height: lineH(46, 36);
+        margin-bottom: 15px;
+        color: $very-dark-blue;
+    }
+    &-caption{
+        margin-bottom: 55px;
+    }
+    &-row{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 50px 100px;
+    }
+    &-group{
+        margin-top: 30px;
+        margin-bottom: 55px;
+    }
+    &-title{
+        margin-bottom: 15px;
+        color: $very-dark-blue;
+    }
+    &-img{
+        position: absolute;
+        top: 50px;
+        right: 0;
+
+        &.img1{
+            right: 180px;
+            top: 70px;
+        }
+    }
+    @include maxw(1200px){
+        &-img{
+            display: none;
+        }
+    }
+    @include maxw(767px){
+        &-col{
+            &:first-child{
+                width: 100%;
+            }
+            &:last-child{
+                width: 100%;
+            }
+        }
+        &-row{
+            gap: 0px 100px;
+        }
+    }
+    @include maxw(519px){
+        &-row{
+            grid-template-columns: repeat(1, 1fr);
+        }
+    }
+}

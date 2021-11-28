@@ -1,0 +1,147 @@
+body {
+    font-family: $secondary-font;
+    font-size: 16px;
+    line-height: 1;
+    color: $light-gray;
+    max-width: 1920px;
+    margin: 0 auto;
+}
+
+section[id]{
+    scroll-margin-top: 20px;
+}
+
+input,
+button,
+textarea,
+select {
+    font-family: $secondary-font;
+    font-size: 16px;
+    outline: none;
+    border: 0;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.second-font {
+    font-family: $secondary-font;
+}
+
+.btn {
+    cursor: pointer;
+    outline: none;
+    border: none;
+    padding: 15px 50px;
+    border-radius: 40px;
+    color: $blue;
+    background-color: inherit;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+a{
+    cursor: pointer;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: $gray;
+    word-break: break-word;
+}
+
+a {
+    color: inherit;
+}
+
+hr{
+    border: 1px solid $very-ligh-gray;
+}
+
+p{
+    line-height: lineH(26, 16);
+    word-break: break-word;
+}
+
+.heading {
+    font-size: 36px;
+    line-height: lineH(56, 36);
+    font-weight: 800;
+    font-family: $secondary-font;
+    margin-bottom: 50px;
+}
+
+.title {
+    font-size: 22px;
+    font-weight: 800;
+    font-family: $secondary-font;
+    line-height: lineH(35, 22);
+    margin-bottom: 20px;
+    display: block;
+}
+
+.text {
+    font-size: 18px;
+    line-height: lineH(34, 18);
+}
+
+.text--small {
+    font-size: 14px;
+}
+
+.highlight-btn{
+    background-color: $blue;
+    color: $white;
+}
+
+
+.title{
+    font-size: 20px;
+    margin-bottom: 20px;
+    &-red{
+        color: $red;
+    }
+    &-green{
+        color: $green;
+    }
+    &-blue{
+        color: $blue;
+    }
+}
+.icon{
+    border-radius: 50%;
+    height: 75px;
+    width: 85px;
+    position: relative;
+    &-red{
+        background-color: $light-red;
+    }
+    &-green{
+        background-color: $light-green;
+    }
+    &-blue{
+        background-color: $light-blue;
+    }
+    &-yellow{
+        background-color: $light-yellow;
+    }
+    &-purple{
+        background-color: $light-purple;
+    }
+    &-orange{
+        background-color: $light-orange;
+    }
+    & > img{
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+    }
+}

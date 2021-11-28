@@ -1,0 +1,24 @@
+.brand{
+    padding: 115px 0;
+    text-align: center;
+    &-heading{
+        font-size: 16px;
+        margin-bottom: 30px;
+    }
+    &-list{
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        align-items: center;
+        justify-items: center;
+        gap: 70px;
+    }
+    &-img{
+        object-fit: contain;
+    }
+    @include maxw(767px){
+        padding: 50px 0;
+        &-list{
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+}
