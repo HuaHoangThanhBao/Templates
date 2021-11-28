@@ -3,17 +3,17 @@
     &-main {
         text-align: center;
     }
-    &-top {
+    &-heading {
         max-width: 800px;
         margin: 0 auto;
-    }
-    &-heading {
         font-size: 40;
         line-height: lineH(50, 40);
         margin-bottom: 30px;
         color: $very-dark-blue;
     }
     &-caption {
+        max-width: 650px;
+        margin: 0 auto;
         margin-bottom: 60px;
     }
     &-body {

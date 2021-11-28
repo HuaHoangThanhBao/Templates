@@ -22,12 +22,14 @@
         }
     }
     &-heading{
+        max-width: 350px;
         font-size: 36px;
         line-height: lineH(46, 36);
         margin-bottom: 15px;
         color: $very-dark-blue;
     }
     &-caption{
+        max-width: 400px;
         margin-bottom: 55px;
     }
     &-row{

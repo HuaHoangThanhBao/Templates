@@ -17,12 +17,14 @@
         }
     }
     &-heading{
+        max-width: 500px;
         font-size: 40;
         line-height: lineH(50, 40);
         margin-bottom: 30px;
         color: $very-dark-blue;
     }
     &-caption{
+        max-width: 500px;
         margin-bottom: 45px;
     }
     &-star{

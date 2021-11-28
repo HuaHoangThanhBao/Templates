@@ -3,11 +3,9 @@
     &-main {
         text-align: center;
     }
-    &-top{
-        max-width: 800px;
-        margin:  0 auto;
-    }
     &-heading {
+        max-width: 450px;
+        margin:  0 auto;
         font-size: 36px;
         line-height: lineH(46, 36);
         margin-bottom: 30px;
@@ -15,6 +13,8 @@
         font-weight: bold;
     }
     &-caption {
+        max-width: 650px;
+        margin:  0 auto;
         line-height: lineH(26, 16);
         margin-bottom: 90px;
     }

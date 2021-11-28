@@ -306,7 +306,7 @@ p {
 }
 .brand-heading {
   font-size: 16px;
-  margin-bottom: 30px;
+  margin-bottom: 40px;
 }
 .brand-list {
   display: grid;
@@ -466,7 +466,7 @@ p {
 .integration-heading {
   font-size: 36px;
   line-height: 1.2777777778;
-  margin-bottom: 30px;
+  margin-bottom: 25px;
   color: #09142e;
 }
 .integration-txt {
@@ -488,11 +488,9 @@ p {
 .choose-main {
   text-align: center;
 }
-.choose-top {
-  max-width: 800px;
-  margin: 0 auto;
-}
 .choose-heading {
+  max-width: 450px;
+  margin: 0 auto;
   font-size: 36px;
   line-height: 1.2777777778;
   margin-bottom: 30px;
@@ -500,6 +498,8 @@ p {
   font-weight: bold;
 }
 .choose-caption {
+  max-width: 650px;
+  margin: 0 auto;
   line-height: 1.625;
   margin-bottom: 90px;
 }
@@ -547,12 +547,14 @@ p {
   position: relative;
 }
 .ultimate-heading {
+  max-width: 350px;
   font-size: 36px;
   line-height: 1.2777777778;
   margin-bottom: 15px;
   color: #09142e;
 }
 .ultimate-caption {
+  max-width: 400px;
   margin-bottom: 55px;
 }
 .ultimate-row {
@@ -607,12 +609,16 @@ p {
   position: relative;
 }
 .charge-heading {
+  max-width: 600px;
+  margin: 0 auto;
   font-size: 36px;
   line-height: 1.2777777778;
   margin-bottom: 30px;
   color: #09142e;
 }
 .charge-caption {
+  max-width: 650px;
+  margin: 0 auto;
   margin-bottom: 80px;
 }
 .charge-option {
@@ -704,12 +710,14 @@ p {
   padding-right: 30%;
 }
 .client-heading {
+  max-width: 500px;
   font-size: 40;
   line-height: 1.25;
   margin-bottom: 30px;
   color: #09142e;
 }
 .client-caption {
+  max-width: 500px;
   margin-bottom: 45px;
 }
 .client-star {
@@ -822,17 +830,17 @@ p {
 .ask-main {
   text-align: center;
 }
-.ask-top {
+.ask-heading {
   max-width: 800px;
   margin: 0 auto;
-}
-.ask-heading {
   font-size: 40;
   line-height: 1.25;
   margin-bottom: 30px;
   color: #09142e;
 }
 .ask-caption {
+  max-width: 650px;
+  margin: 0 auto;
   margin-bottom: 60px;
 }
 .ask-body {

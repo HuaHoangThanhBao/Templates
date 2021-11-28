@@ -5,12 +5,16 @@
         position: relative;
     }
     &-heading {
+        max-width: 600px;
+        margin: 0 auto;
         font-size: 36px;
         line-height: lineH(46, 36);
         margin-bottom: 30px;
         color: $very-dark-blue;
     }
     &-caption {
+        max-width: 650px;
+        margin: 0 auto;
         margin-bottom: 80px;
     }
     &-option {
