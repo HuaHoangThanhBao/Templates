@@ -1,0 +1,94 @@
+.fact{
+    background-image: url('../../home/images/fact-bg.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    &-main{
+        padding: 100px 0 0 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    &-top{
+        display: flex;
+        flex-wrap: wrap;
+        margin-bottom: 100px;
+    }
+    &-col{
+        width: calc(100% / 4);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        &:not(:last-child){
+            border-right: 1px solid $light-yellow;
+        }
+    }
+    &-icon{
+        width: 103px;
+        height: 103px;
+        background-color: $black;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 30px;
+    }
+    &-number{
+        font-size: 50px;
+        line-height: lineH(50, 36);
+        color: $white;
+        font-weight: bold;
+    }
+    &-caption{
+        font-size: 18px;
+        line-height: lineH(36, 18);
+        color: $white;
+    }
+    &-bottom{
+        right: 15px;
+        height: 85px;
+        background-color: $black;
+        display: flex;
+        flex-wrap: wrap;
+    }
+    &-block{
+        width: calc(100% / 3);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: $white;
+        font-weight: bold;
+        &.white{
+            background-color: $white;
+            color: $black;
+        }
+        &.brown{
+            background-color: $black-brown;
+        }
+    }
+    @include maxw(1023px){
+        &-col{
+            width: calc(100% / 2);
+            &:not(:last-child){
+                border-right: none;
+            }
+            &:nth-child(1), &:nth-child(2){
+                margin-bottom: 30px;
+            }
+        }
+    }
+    @include maxw(767px){
+        &-col{
+            width: 100%;
+            &:not(:last-child){
+                margin-bottom: 30px;
+            }
+        }
+        &-bottom{
+            height: auto;
+        }
+        &-block{
+            width: 100%;
+            padding: 15px 0;
+        }
+    }
+}

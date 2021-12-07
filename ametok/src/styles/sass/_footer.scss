@@ -1,0 +1,116 @@
+.footer{
+    &-top{
+        background-image: url('../../home/images/footer-bg.png');
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center top;
+        padding: 120px 0;
+    }
+    &-main{
+        display: flex;
+        flex-wrap: wrap;
+        &.space-between{
+            justify-content: space-between;
+        }
+    }
+    &-col{
+        padding-right: 50px;
+        &:nth-child(1){
+            padding-right: 30px;
+            width: 280px;
+        }
+        &:nth-child(2){
+            width: 190px;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+        &:nth-child(3){
+            width: 350px;
+        }
+        &:nth-child(4){
+            padding: 0 0 0 50px;
+            width: calc(100% - 280px - 190px - 350px);
+        }
+    }
+    &-heading{
+        font-size: 20px;
+        margin-bottom: 40px;
+        color: $white;
+    }
+    &-txt{
+        font-size: 14px;
+        line-height: lineH(26, 14);
+        margin-bottom: 15px;
+        color: $light-grey;
+        border-bottom: 2px solid transparent;
+        & > i {
+            color: $yellow;
+            margin-right: 10px;
+        }
+        &.inline:hover{
+            border-bottom: 2px solid $yellow;
+        }
+        &.br-bt:not(:last-child){
+            padding-bottom: 15px;
+            border-bottom: 1px solid $dark-grey;
+        }
+    }
+    &-btn{
+        margin-top: 25px;
+        padding: 20px 40px;
+        font-size: 16px;
+        color: $white;
+        font-weight: bold;
+        background-color: $yellow;
+    }
+    &-social{
+        display: flex;
+        padding: 25px 0;
+        color: $white;
+        & > a:not(:last-child) {
+            margin-right: 25px;
+        }
+    }
+    &-bottom{
+        padding: 35px 0;
+        background-color: $very-dark-black;
+        .text--small{
+            font-weight: bold;
+        }
+    }
+    @include maxw(1199px) {
+        &-top{
+            padding: 50px 0;
+        }
+        &-col{
+            &:nth-child(1),
+            &:nth-child(2),
+            &:nth-child(3),
+            &:nth-child(4){
+                width: 50%;
+            }
+
+            &:nth-child(2){
+                padding: 0 0 50px 50px;
+            }
+        }
+    }
+    @include maxw(767px) {
+        &-col{
+            &:nth-child(1),
+            &:nth-child(2),
+            &:nth-child(3),
+            &:nth-child(4){
+                width: 100%;
+            }
+
+            &:nth-child(2){
+                padding: 50px 0 50px 0;
+            }
+            &:nth-child(4){
+                padding: 50px 0 0 0;
+            }
+        }
+    }
+}

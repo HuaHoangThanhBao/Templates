@@ -1,0 +1,108 @@
+.construction {
+    padding: 120px 0;
+    background-color: $white-smoke;
+    color: $white;
+    &-main {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 30px;
+        justify-content: space-between;
+    }
+    &-link {
+        width: calc(calc(100% / 3) - 30px);
+        position: relative;
+    }
+    &-overlay {
+        background: rgba(0, 0, 0, 0.7);
+        position: absolute;
+        width: 100%;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        transition: all 0.4s ease-in-out 0s;
+        opacity: 0;
+    }
+    &-detail {
+        padding: 30px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 100%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+
+        &.animation {
+            top: 80%;
+            left: 50%;
+            opacity: 0;
+            transform: translate(-50%, -50%);
+            transition: all 0.3s ease-in-out 0s;
+        }
+    }
+    &-link:hover &-overlay {
+        opacity: 1;
+    }
+    &-link:hover &-detail.animation {
+        top: 50%;
+        left: 50%;
+        opacity: 1;
+        height: 100%;
+    }
+    &-heading {
+        max-width: 175px;
+        font-size: 30px;
+        line-height: lineH(34, 30);
+        font-weight: bold;
+        margin-bottom: 30px;
+        &.center {
+            margin: 0 auto;
+        }
+    }
+    &-caption{
+        text-align: left;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        -webkit-line-clamp: 3;
+        line-clamp: 3;
+        -webkit-box-orient: vertical;
+    }
+    &-btn {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        padding: 22px;
+        background-color: $yellow;
+        color: $white;
+    }
+    @include minmax(767px, 1023px) {
+        padding: 50px 0;
+        &-heading {
+            font-size: 20px;
+        }
+        &-caption{
+            font-size: 14px;
+        }
+        &-btn{
+            padding: 10px;
+        }
+    }
+    @include maxw(767px) {
+        &-link {
+            width: 100%;
+            &:last-child{
+                margin: 0;
+            }
+            & > img {
+                width: 100%;
+            }
+        }
+        &-heading {
+            max-width: none;
+        }
+        &-caption{
+            text-align: center;
+        }
+    }
+}

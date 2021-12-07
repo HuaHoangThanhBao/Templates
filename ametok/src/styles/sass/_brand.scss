@@ -1,0 +1,21 @@
+.brand{
+    padding: 120px 0;
+    background-color: $white-smoke;
+    &-main{
+        display: flex;
+        flex-wrap: wrap;
+    }
+    &-col{
+        width: calc(100% / 5);
+        display: flex;
+        justify-content: center;
+    }
+    @include maxw(1023px) {
+        padding: 50px 0;
+        &-col{
+            width: 100%;
+            padding: 25px 0;
+            justify-content: flex-start;
+        }
+    }
+}

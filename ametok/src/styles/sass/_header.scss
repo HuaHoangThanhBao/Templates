@@ -1,0 +1,103 @@
+.header {
+    background-color: $white;
+    border-bottom: 1px solid $white-smoke;
+    &.fixed{
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 999;
+    }
+    &-main {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+    }
+    &-col {
+        &:first-child {
+            max-width: 175px;
+        }
+        &:last-child {
+            width: calc(100% - 175px);
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: flex-end;
+            align-items: center;
+        }
+    }
+    &-link {
+        margin-right: 50px;
+        &:nth-child(6) {
+            margin: 0;
+        }
+    }
+    &-search {
+        margin-left: 40px;
+        font-size: 28px;
+    }
+    &-cart {
+        margin-left: 30px;
+        font-size: 28px;
+    }
+    &-burger {
+        display: none;
+    }
+    &-phone {
+        background-color: $yellow;
+        color: $white;
+        display: flex;
+        align-items: center;
+        margin: 0;
+        margin-left: 40px;
+        padding: 30px 40px;
+    }
+    &-call-icon {
+        margin-right: 15px;
+    }
+    &-txt {
+        line-height: 1.5;
+        &.bold {
+            font-weight: bold;
+        }
+    }
+    &-menu {
+        width: 100%;
+        max-height: 0;
+        overflow: hidden;
+        transition: all 0.25s;
+        background-color: $black-brown;
+        &-main{
+            display: flex;
+            flex-wrap: wrap;
+        }
+        &.active {
+            max-height: 200px;
+            transition: max-height 0.5s ease-in-out;
+        }
+    }
+    &-opt {
+        padding: 20px 35px 20px 0;
+        color: $white;
+    }
+    @include maxw(1199px) {
+        &-main {
+            padding: 15px 0;
+        }
+        &-link,
+        &-cart,
+        &-search,
+        &-phone {
+            display: none;
+            margin: 0;
+        }
+        &-burger {
+            display: flex;
+        }
+    }
+    @include minw(1200px) {
+        &-menu {
+            height: 0;
+        }
+    }
+}

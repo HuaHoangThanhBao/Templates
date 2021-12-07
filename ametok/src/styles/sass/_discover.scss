@@ -1,0 +1,69 @@
+.discover{
+    padding: 100px 0;
+    background-image: url('../../home/images/quality.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    &-main{
+        display: flex;
+        flex-wrap: wrap;
+    }
+    &-col{
+        &:first-child{
+            width: 70%;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+        }
+        &:last-child{
+            width: 30%;
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+        }
+    }
+    &-heading{
+        color: $white;
+        font-size: 40px;
+        line-height: lineH(50, 40);
+        width: calc(calc(100% - 130px) - 40px);
+        margin-left: 40px;
+    }
+    &-icon{
+        width: 130px;
+        height: 130px;
+        background-color: $black;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    &-btn{
+        padding: 30px 50px;
+        background-color: $black;
+        color: $white;
+        font-weight: bold;
+    }
+    @include maxw (1023px){
+        padding: 50px 0;
+        &-col{
+            &:first-child, &:last-child{
+                width: 100%;
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            &:first-child{
+                margin-bottom: 50px;
+            }
+        }
+        &-heading{
+            margin: 15px 0 0 0;
+            font-size: 35px;
+            width: 100%;
+        }
+    }
+    @include maxw (767px){
+        &-heading{
+            font-size: 30px;
+        }
+    }
+}

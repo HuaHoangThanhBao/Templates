@@ -1,0 +1,136 @@
+.team {
+    padding: 60px 0 0 0;
+    &-main {
+        display: flex;
+        flex-wrap: wrap;
+        margin-bottom: 120px;
+    }
+    &-col {
+        &:first-child {
+            width: 50%;
+            & > img {
+                height: 100%;
+            }
+        }
+        &:last-child {
+            width: calc(50% - 70px);
+            margin-left: 70px;
+        }
+    }
+    &-caption {
+        font-size: 26px;
+        line-height: lineH(34, 26);
+        color: $yellow;
+        margin-bottom: 50px;
+    }
+    &-content {
+        margin-bottom: 40px;
+    }
+    &-detail {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 15px;
+    }
+    &-icon {
+        padding: 12px;
+        color: $yellow;
+        margin-right: 15px;
+        background-color: $white-smoke;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    &-txt {
+        width: calc(100% - 12px);
+    }
+
+    &-expert {
+        text-align: center;
+        .space {
+            margin: 0 auto;
+            margin-bottom: 20px;
+        }
+    }
+    &-list {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 30px;
+        justify-content: space-between;
+    }
+    &-item {
+        width: calc(calc(100% / 3) - 30px);
+        position: relative;
+        & > img{
+            width: 100%;
+        }
+    }
+    &-contact {
+        position: absolute;
+        bottom: -85px;
+        z-index: 2;
+        padding: 25px 10px;
+        left: 40px;
+        right: 40px;
+        color: $black;
+        &.white {
+            background-color: $white;
+            border-top: 3px solid $yellow;
+        }
+        &.yellow {
+            background-color: $yellow;
+            border-top: 3px solid $white;
+            color: $white;
+        }
+    }
+    &-name{
+        font-size: 22px;
+        line-height: lineH(24, 22);
+        font-weight: bold;
+        margin-bottom: 10px;
+    }
+    &-position{
+        font-size: 16px;
+        line-height: lineH(24, 16);
+        margin-bottom: 20px;
+    }
+    &-name, &-position{
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        -webkit-line-clamp: 1;
+        line-clamp: 1;
+        -webkit-box-orient: vertical;
+    }
+    @include maxw (1023px){
+        &-main{
+            margin-bottom: 50px;
+        }
+        &-col{
+            &:first-child, &:last-child{
+                width: 100%;
+            }
+            &:last-child{
+                margin: 30px 0 0 0;
+            }
+        }
+        &-caption{
+            margin-bottom: 30px;
+            font-size: 24px;
+        }
+        &-name{
+            font-size: 18px;
+        }
+        &-position{
+            font-size: 15px;
+        }
+    }
+    @include maxw (767px){
+        &-item{
+            width: 100%;
+            &:last-child{
+                margin: 0;
+            }
+        }
+    }
+}

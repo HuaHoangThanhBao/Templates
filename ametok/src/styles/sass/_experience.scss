@@ -1,0 +1,44 @@
+.experience{
+    padding: 160px 0 130px 0;
+    background-image: url('../../home/images/great-experience.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    &-main{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        text-align: center;
+    }
+    &-play{
+        border: 1px solid $light-brown;
+        padding: 15px;
+        margin: 0 auto;
+        margin-bottom: 40px;
+    }
+    &-box{
+        background-color: $yellow;
+        padding: 40px;
+        color: $white;
+        & > i {
+            font-size: 20px;
+        }
+    }
+    &-heading{
+        max-width: 850px;
+        margin: 0 auto;
+        color: $white;
+        font-size: 60px;
+        line-height: lineH(70, 60);
+    }
+    @include maxw (1023px){
+        &-heading{
+            font-size: 50px;
+        }
+    }
+    @include maxw (767px){
+        &-heading{
+            font-size: 35px;
+        }
+    }
+}

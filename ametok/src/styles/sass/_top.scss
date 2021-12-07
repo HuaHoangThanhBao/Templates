@@ -1,0 +1,46 @@
+.top{
+    background-color: $black;
+    color: $grey;
+    &-main{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+    &-col{
+        width: 50%;
+        display: flex;
+        flex-wrap: wrap;
+        &:last-child{
+            justify-content: flex-end;
+        }
+    }
+    &-social, &-txt{
+        padding: 15px 0;
+    }
+    .social{
+        margin-right: 20px;
+    }
+    &-email{
+        margin-right: 30px;
+    }
+    &-txt{
+        font-size: 12px;
+        i {
+            color: $yellow;
+            margin-right: 10px;
+        }
+    }
+    @include maxw(1023px){
+        &-col{
+            width: 100%;
+            &:last-child{
+                justify-content: flex-start;
+            }
+        }
+    }
+    @include maxw(767px){
+        &-txt{
+            padding: 5px 0;
+        }
+    }
+}

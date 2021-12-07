@@ -1,0 +1,97 @@
+.testimonial{
+    padding: 120px 0 50px 0;
+    background-image: url('../../home/images/testimonial-bg.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center left;
+    &-main{
+        display: flex;
+        flex-wrap: wrap;
+        margin-bottom: 70px;
+    }
+    &-col{
+        width: 50%;
+        &:last-child{
+            padding: 50px 20px;
+        }
+    }
+    &-content{
+        max-width: 535px;
+        color: $grey;
+        line-height: lineH(34, 18);
+    }
+    &-list{
+        display: flex;
+        flex-wrap: wrap;
+        border: 2px solid black;
+    }
+    &-item{
+        width: calc(100% / 3);
+        background-color: white;
+        padding: 75px 70px;
+        position: relative;
+        text-align: center;
+        border-top: 3px solid $white;
+        &:not(:last-child){
+            border-right: 1px solid $white-smoke;
+        }
+        &:hover{
+            background-color: $white-smoke;
+            border-top: 3px solid $yellow;
+        }
+        &:hover .testimonial-avatar{
+            border: 3px solid $yellow;
+        }
+    }
+    &-avatar{
+        border: 3px solid transparent;
+        position: absolute;
+        top: -55px;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    &-description{
+        font-size: 20px;
+        line-height: lineH(38, 20);
+        margin-bottom: 35px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        -webkit-line-clamp: 6;
+        line-clamp: 6;
+        -webkit-box-orient: vertical;
+    }
+    &-name{
+        color: $yellow;
+        font-size: 20px;
+        line-height: lineH(38, 20);
+        font-weight: bold;
+    }
+    @include maxw(1023px) {
+        padding: 50px 0;
+        &-item{
+            padding: 55px 40px;
+        }
+        &-description{
+            font-size: 17px;
+        }
+    }
+    @include maxw(767px) {
+        &-main{
+            margin-bottom: 100px;
+        }
+        &-col{
+            width: 100%;
+            &:last-child{
+                padding: 0;
+            }
+        }
+        &-item{
+            width: 100%;
+            padding: 80px 20px;
+        }
+        &-description{
+            font-size: 15px;
+        }
+    }
+}
