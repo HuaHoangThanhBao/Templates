@@ -446,7 +446,7 @@ hr {
 
 .header {
   background-color: #ffffff;
-  border-bottom: 1px solid #f6f6f6;
+  box-shadow: 15px 10px 28px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.13);
 }
 .header.fixed {
   position: fixed;
@@ -545,14 +545,14 @@ hr {
 
 .hero {
   height: 800px;
-  background-image: url("../../home/images/hero.png");
+  background-image: url("../../images/hero.png");
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
 }
 .hero.blog {
   height: 370px;
-  background-image: url("../../blog/images/banner.png");
+  background-image: url("../../images/banner.png");
 }
 .hero-main {
   display: flex;
@@ -777,7 +777,7 @@ hr {
 
 .partner {
   padding: 115px 0;
-  background-image: url("../../home/images/welcome.png");
+  background-image: url("../../images/welcome.png");
   background-position: center left;
   background-repeat: no-repeat;
   background-size: contain;
@@ -944,7 +944,7 @@ hr {
 
 .testimonial {
   padding: 120px 0 50px 0;
-  background-image: url("../../home/images/testimonial-bg.png");
+  background-image: url("../../images/testimonial-bg.png");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center left;
@@ -1043,7 +1043,7 @@ hr {
 }
 
 .fact {
-  background-image: url("../../home/images/fact-bg.png");
+  background-image: url("../../images/fact-bg.png");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
@@ -1271,7 +1271,7 @@ hr {
 
 .experience {
   padding: 160px 0 130px 0;
-  background-image: url("../../home/images/great-experience.png");
+  background-image: url("../../images/great-experience.png");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
@@ -1316,7 +1316,7 @@ hr {
 
 .discover {
   padding: 100px 0;
-  background-image: url("../../home/images/quality.png");
+  background-image: url("../../images/quality.png");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
@@ -1429,7 +1429,7 @@ hr {
 }
 
 .footer-top {
-  background-image: url("../../home/images/footer-bg.png");
+  background-image: url("../../images/footer-bg.png");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center top;

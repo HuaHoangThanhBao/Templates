@@ -4,12 +4,12 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Blog</title>
+    <title>Shop</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="../styles/css/blog.css">
+    <link rel="stylesheet" href="./styles/css/blog-detail.css">
 </head>
 
 <body>
@@ -44,14 +44,14 @@
         <div class="container">
             <div class="header-main">
                 <div class="header-col">
-                    <img src="./images/Logo.png" alt="">
+                    <a href="index.html"><img src="./images/Logo.png" alt=""></a>
                 </div>
                 <div class="header-col">
-                    <a href="#" class="header-link">Home</a>
-                    <a href="#" class="header-link">Pages</a>
+                    <a href="index.html" class="header-link">Home</a>
+                    <a href="shop.html" class="header-link">Shop</a>
                     <a href="#" class="header-link">Services</a>
                     <a href="#" class="header-link">Projects</a>
-                    <a href="#" class="header-link">News</a>
+                    <a href="blog.html" class="header-link">News</a>
                     <a href="#" class="header-link">Contact</a>
                     <a id="header-burger" class="header-link header-burger">
                         <svg viewBox="0 0 100 80" width="40" height="40">
@@ -81,11 +81,11 @@
         <div id="header-menu" class="header-menu">
             <div class="container">
                 <div class="header-menu-main">
-                    <a href="#" class="header-opt">Home</a>
-                    <a href="#" class="header-opt">Pages</a>
+                    <a href="index.html" class="header-opt">Home</a>
+                    <a href="shop.html" class="header-opt">Shop</a>
                     <a href="#" class="header-opt">Services</a>
                     <a href="#" class="header-opt">Projects</a>
-                    <a href="#" class="header-opt">News</a>
+                    <a href="blog.html" class="header-opt">News</a>
                     <a href="#" class="header-opt">Contact</a>
                 </div>
             </div>
@@ -96,21 +96,99 @@
             <div class="hero-main">
                 <div class="hero-col">
                     <h1 class="heading white">
-                        Latest News
+                        Shop
                     </h1>
                 </div>
                 <div class="hero-col breadcum">
                     <div class="hero-breadcum">
-                        Home / News
+                        Home / Shop
                     </div>
                 </div>
             </div>
         </div>
     </section>
-    <section id="news" class="news">
+    <section class="content">
         <div class="container">
-            <div class="news-main">
-                <div id="news-list" class="news-list">
+            <div class="content-main reverse-col">
+                <div id="shop" class="content-col">
+                    <div class="content-sort">
+                        <div class="content-sort__col">
+                            <p class="content-sort__txt">Showing 1-9 of 12 results</p>
+                        </div>
+                        <div class="content-sort__col">
+                            <div name="" id="" class="content-sort__select">
+                                <select name="" id="">
+                                    <option value="">Classic Chair</option>
+                                    <option value="">Classic Chair</option>
+                                    <option value="">Classic Chair</option>
+                                    <option value="">Classic Chair</option>
+                                    <option value="">Classic Chair</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="shop-list" class="content-list">
+                        
+                    </div>
+                </div>
+                <div class="content-col">
+                    <div class="send black">
+                        <input type="text" class="send-inp" placeholder="Search">
+                        <i class="fa fa-search"></i>
+                    </div>
+                    <div class="content-block normal">
+                        <h4 class="content-block__heading">
+                            Price
+                        </h4>
+                        <div class="slider">
+                            <input class="slider-range" type="range" min="100" max="1000" value="300" step="100"/>
+                            <div class="slider-option">
+                                <p class="slider-value">$50 - $500</p>
+                                <button class="slider-btn">Filter</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="content-block normal">
+                        <h4 class="content-block__heading">
+                            Categories
+                        </h4>
+                        <div class="content-block__row auto">
+                            <i class="fa fa-angle-right"></i>
+                            <p class="content-block__txt">
+                                Construction
+                            </p>
+                        </div>
+                        <div class="content-block__row auto">
+                            <i class="fa fa-angle-right"></i>
+                            <p class="content-block__txt">
+                                Industrial Materials
+                            </p>
+                        </div>
+                        <div class="content-block__row auto">
+                            <i class="fa fa-angle-right"></i>
+                            <p class="content-block__txt">
+                                Engineering
+                            </p>
+                        </div>
+                        <div class="content-block__row auto">
+                            <i class="fa fa-angle-right"></i>
+                            <p class="content-block__txt">
+                                Building Plans
+                            </p>
+                        </div>
+                        <div class="content-block__row auto">
+                            <i class="fa fa-angle-right"></i>
+                            <p class="content-block__txt">
+                                Rennovations
+                            </p>
+                        </div>
+                        <div class="content-block__row auto">
+                            <i class="fa fa-angle-right"></i>
+                            <p class="content-block__txt">
+                                Civil Engineering
+                            </p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -206,117 +284,107 @@
             </div>
         </div>
     </section>
-    <script src="../scripts/slider.js"></script>
+    <script src="./scripts/header.js"></script>
+    <script src="./scripts/slider.js"></script>
     <script>
-        const newsData = [
+        const shopData = [
             {
-                image: '1.png',
-                day: '07',
-                month: 'Oct',
-                caption: 'by Admin / 2 Comments',
-                title: 'How to Build your Mechanical Tools Industry',
-                content: 'Lorem ipsum is simply free text used by copytyping refreshing.'
+                image: 'shop-1.png',
+                link: '',
+                title: 'Chair',
+                price: '14.00',
+                star: 5
             },
             {
-                image: '2.png',
-                day: '07',
-                month: 'Oct',
-                caption: 'by Admin / 2 Comments',
-                title: 'How to Build your Mechanical Tools Industry',
-                content: 'Lorem ipsum is simply free text used by copytyping refreshing.'
+                image: 'shop-2.png',
+                link: '',
+                title: 'Chair',
+                price: '14.00',
+                star: 4
             },
             {
-                image: '3.png',
-                day: '07',
-                month: 'Oct',
-                caption: 'by Admin / 2 Comments',
-                title: 'How to Build your Mechanical Tools Industry',
-                content: 'Lorem ipsum is simply free text used by copytyping refreshing.'
+                image: 'shop-3.png',
+                link: '',
+                title: 'Chair',
+                price: '14.00',
+                star: 3
             },
             {
-                image: '3.png',
-                day: '07',
-                month: 'Oct',
-                caption: 'by Admin / 2 Comments',
-                title: 'How to Build your Mechanical Tools Industry',
-                content: 'Lorem ipsum is simply free text used by copytyping refreshing.'
+                image: 'shop-4.png',
+                link: '',
+                title: 'Chair',
+                price: '14.00',
+                star: 2
             },
             {
-                image: '2.png',
-                day: '07',
-                month: 'Oct',
-                caption: 'by Admin / 2 Comments',
-                title: 'How to Build your Mechanical Tools Industry',
-                content: 'Lorem ipsum is simply free text used by copytyping refreshing.'
+                image: 'shop-5.png',
+                link: '',
+                title: 'Chair',
+                price: '14.00',
+                star: 5
             },
             {
-                image: '1.png',
-                day: '07',
-                month: 'Oct',
-                caption: 'by Admin / 2 Comments',
-                title: 'How to Build your Mechanical Tools Industry',
-                content: 'Lorem ipsum is simply free text used by copytyping refreshing.'
+                image: 'shop-6.png',
+                link: '',
+                title: 'Chair',
+                price: '14.00',
+                star: 1
             },
             {
-                image: '5.png',
-                day: '07',
-                month: 'Oct',
-                caption: 'by Admin / 2 Comments',
-                title: 'How to Build your Mechanical Tools Industry',
-                content: 'Lorem ipsum is simply free text used by copytyping refreshing.'
+                image: 'shop-7.png',
+                link: '',
+                title: 'Chair',
+                price: '14.00',
+                star: 1
             },
             {
-                image: '1.png',
-                day: '07',
-                month: 'Oct',
-                caption: 'by Admin / 2 Comments',
-                title: 'How to Build your Mechanical Tools Industry',
-                content: 'Lorem ipsum is simply free text used by copytyping refreshing.'
+                image: 'shop-8.png',
+                link: '',
+                title: 'Chair',
+                price: '14.00',
+                star: 5
             },
             {
-                image: '6.png',
-                day: '07',
-                month: 'Oct',
-                caption: 'by Admin / 2 Comments',
-                title: 'How to Build your Mechanical Tools Industry',
-                content: 'Lorem ipsum is simply free text used by copytyping refreshing.'
+                image: 'shop-9.png',
+                link: '',
+                title: 'Chair',
+                price: '14.00',
+                star: 3
             },
             {
-                image: '5.png',
-                day: '07',
-                month: 'Oct',
-                caption: 'by Admin / 2 Comments',
-                title: 'How to Build your Mechanical Tools Industry',
-                content: 'Lorem ipsum is simply free text used by copytyping refreshing.'
+                image: 'shop-7.png',
+                link: '',
+                title: 'Chair',
+                price: '14.00',
+                star: 4
             },
             {
-                image: '3.png',
-                day: '07',
-                month: 'Oct',
-                caption: 'by Admin / 2 Comments',
-                title: 'How to Build your Mechanical Tools Industry',
-                content: 'Lorem ipsum is simply free text used by copytyping refreshing.'
+                image: 'shop-6.png',
+                link: '',
+                title: 'Chair',
+                price: '14.00',
+                star: 5
             },
             {
-                image: '6.png',
-                day: '07',
-                month: 'Oct',
-                caption: 'by Admin / 2 Comments',
-                title: 'How to Build your Mechanical Tools Industry',
-                content: 'Lorem ipsum is simply free text used by copytyping refreshing.'
-            }
+                image: 'shop-5.png',
+                link: '',
+                title: 'Chair',
+                price: '14.00',
+                star: 2
+            },
         ];
 
         const c = new Carousel({
-            data: newsData,
-            limit: 6,
-            rootId: 'news',
-            listId: 'news-list',
-            itemClass: 'news-item',
+            data: shopData,
+            limit: 9,
+            rootId: 'shop',
+            listId: 'shop-list',
+            itemClass: 'content-list__item',
             folder: './images',
             navigatorCustomClass: 'black'
         });
-        c.initNewsCarousel()
+        
+        c.initShopCarousel()
     </script>
 </body>
 

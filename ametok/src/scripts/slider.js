@@ -11,6 +11,7 @@ function Carousel(){
     this.root = document.querySelector(`#${rootId}`);
 }
 
+/*Init with option*/
 Carousel.prototype.initImageCarousel = function(){
     if(!this.root) return;
     this.renderImageCarousel();
@@ -53,7 +54,9 @@ Carousel.prototype.renderImageCarousel = function (){
 
     this.parent.innerHTML = html;
 }
+/*End Init*/
 
+/*Render with option*/
 Carousel.prototype.renderTestimonialCarousel = function(){
     this.parent = document.querySelector(`#${this.listId}`);
     if(!this.parent) return;
@@ -159,20 +162,9 @@ Carousel.prototype.renderShopCarousel = function(){
 
     this.parent.innerHTML = html;
 }
+/*End Render with option*/
 
-Carousel.prototype.attachNavigator = function(){
-    const pageAmount = Math.ceil(this.data.length / this.limit);
-    const amountArray = Array.from(Array(pageAmount).keys());
-    return `
-        <div class="navigator ${this.navigatorCustomClass}">
-            ${amountArray.map(number =>
-                    `<a data-index=${number} class='navigator-link ${number === this.pageIndex ? 'active' : ''}'></a>`
-                ).join('')
-            }
-        </div>
-    `;
-}
-
+/*Handle selection event with option*/
 Carousel.prototype.handleNavigatorSelection = function(e){
     this.activeNavigatorLink(e);
     this.renderImageCarousel();
@@ -191,6 +183,20 @@ Carousel.prototype.handleNewsNavigatorSelection = function(e){
 Carousel.prototype.handleShopNavigatorSelection = function(e){
     this.activeNavigatorLink(e);
     this.renderShopCarousel();
+}
+/*End Handle selection event with option*/
+
+Carousel.prototype.attachNavigator = function(){
+    const pageAmount = Math.ceil(this.data.length / this.limit);
+    const amountArray = Array.from(Array(pageAmount).keys());
+    return `
+        <div class="navigator ${this.navigatorCustomClass}">
+            ${amountArray.map(number =>
+                    `<a data-index=${number} class='navigator-link ${number === this.pageIndex ? 'active' : ''}'></a>`
+                ).join('')
+            }
+        </div>
+    `;
 }
 
 Carousel.prototype.activeNavigatorLink = function(e){

@@ -173,19 +173,25 @@ hr {
   display: flex;
   justify-content: center;
 }
-.navigator > a {
+.navigator-link {
   height: 13px;
   width: 13px;
   background-color: #b3b3b350;
   margin-right: 10px;
 }
-.navigator > a:hover {
+.navigator-link.active {
   background-color: #ffffff;
 }
-.navigator.black > a {
+.navigator-link:hover {
+  background-color: #ffffff;
+}
+.navigator.black > .navigator-link {
   background-color: rgba(0, 0, 0, 0.377);
 }
-.navigator.black > a:hover {
+.navigator.black > .navigator-link.active {
+  background-color: #232323;
+}
+.navigator.black > .navigator-link:hover {
   background-color: #232323;
 }
 
@@ -441,7 +447,7 @@ hr {
 
 .header {
   background-color: #ffffff;
-  border-bottom: 1px solid #f6f6f6;
+  box-shadow: 15px 10px 28px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.13);
 }
 .header.fixed {
   position: fixed;
@@ -540,14 +546,14 @@ hr {
 
 .hero {
   height: 800px;
-  background-image: url("../../home/images/hero.png");
+  background-image: url("../../images/hero.png");
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
 }
 .hero.blog {
   height: 370px;
-  background-image: url("../../blog/images/banner.png");
+  background-image: url("../../images/banner.png");
 }
 .hero-main {
   display: flex;
@@ -1240,7 +1246,7 @@ hr {
 }
 
 .footer-top {
-  background-image: url("../../home/images/footer-bg.png");
+  background-image: url("../../images/footer-bg.png");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center top;
