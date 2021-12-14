@@ -278,12 +278,14 @@
         }
     }
     &-list {
+        --columns: 3;
         display: flex;
         flex-wrap: wrap;
-        justify-content: space-between;
-        gap: 30px;
+        margin-left: calc(-1 * var(--spacing));
         &__item {
-            width: calc(calc(100% / 3) - 30px);
+            width: calc(calc(100% / var(--columns)) - var(--spacing));
+            margin-left: var(--spacing);
+            margin-bottom: var(--spacing);
             position: relative;
             text-align: center;
         }
@@ -576,9 +578,7 @@
             padding: 30px 0 0 0;
         }
         &-list {
-            &__item {
-                width: calc(50% - 15px);
-            }
+            --columns: 2;
         }
         &-sort {
             &__col {
@@ -592,9 +592,7 @@
     }
     @include maxw(449px) {
         &-list {
-            &__item {
-                width: 100%;
-            }
+            --columns: 1;
         }
     }
     @include maxw(379px) {
