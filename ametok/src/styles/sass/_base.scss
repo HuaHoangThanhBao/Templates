@@ -236,7 +236,6 @@ hr {
         --columns: 3;
         display: flex;
         flex-wrap: wrap;
-        justify-content: space-between;
         margin-left: calc(-1 * var(--spacing));
     }
     &-item {
