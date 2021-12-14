@@ -126,7 +126,7 @@ hr {
 }
 
 .space {
-  width: 30px;
+  width: var(--spacing);
   height: 3px;
   background-color: #fcb222;
   margin: 0 auto;
@@ -160,7 +160,7 @@ hr {
   display: inline-block;
   background-color: #fcb222;
   position: relative;
-  margin-bottom: 30px;
+  margin-bottom: var(--spacing);
   padding: 50px;
 }
 .icon > img {
@@ -228,24 +228,24 @@ hr {
 }
 .social.footer > a {
   background-color: inherit;
-  padding: 20px 30px 0 0;
+  padding: 20px var(--spacing) 0 0;
   width: auto;
   height: auto;
 }
 .social.flex-end > a {
-  padding: 20px 0 20px 30px;
+  padding: 20px 0 20px var(--spacing);
   justify-content: flex-end;
   background-color: transparent;
 }
 @media screen and (max-width: 767px) {
   .social.flex-end > a {
-    padding: 20px 30px 0 0;
+    padding: 20px var(--spacing) 0 0;
     justify-content: flex-start;
   }
 }
 
 .send {
-  padding: 20px 30px;
+  padding: 20px var(--spacing);
   background-color: #ffffff;
   display: flex;
   align-items: center;
@@ -261,7 +261,7 @@ hr {
   color: #ffffff;
 }
 .send-inp {
-  width: calc(100% - 30px);
+  width: calc(100% - var(--spacing));
   background-color: transparent;
 }
 .send > i {
@@ -287,7 +287,7 @@ hr {
 }
 .news-top {
   position: relative;
-  margin-bottom: 30px;
+  margin-bottom: var(--spacing);
 }
 .news-top img {
   width: 100%;
@@ -320,7 +320,7 @@ hr {
   font-size: 26px;
   font-weight: bold;
   color: #232323;
-  margin-bottom: 30px;
+  margin-bottom: var(--spacing);
 }
 .news-brief {
   line-height: 1.6666666667;
