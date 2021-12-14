@@ -38,7 +38,7 @@
         justify-content: center;
     }
     &-btn{
-        padding: 30px 50px;
+        padding: var(--spacing) 50px;
         background-color: $black;
         color: $white;
         font-weight: bold;

@@ -2,12 +2,13 @@
     background-color: $black;
     color: $grey;
     &-main{
+        --columns: 2;
         display: flex;
         flex-wrap: wrap;
         justify-content: space-between;
     }
     &-col{
-        width: 50%;
+        width: calc(100% / var(--columns));
         display: flex;
         flex-wrap: wrap;
         &:last-child{
@@ -31,8 +32,10 @@
         }
     }
     @include maxw(1023px){
+        &-main{
+            --columns: 1;
+        }
         &-col{
-            width: 100%;
             &:last-child{
                 justify-content: flex-start;
             }

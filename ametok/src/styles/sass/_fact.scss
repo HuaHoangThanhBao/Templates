@@ -4,6 +4,7 @@
     background-repeat: no-repeat;
     background-position: center center;
     &-main{
+        --columns: 4;
         padding: 100px 0 0 0;
         display: flex;
         flex-direction: column;
@@ -15,7 +16,7 @@
         margin-bottom: 100px;
     }
     &-col{
-        width: calc(100% / 4);
+        width: calc(100% / var(--columns));
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -30,7 +31,7 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        margin-bottom: 30px;
+        margin-bottom: var(--spacing);
     }
     &-number{
         font-size: 50px;
@@ -44,6 +45,7 @@
         color: $white;
     }
     &-bottom{
+        --columns: 3;
         right: 15px;
         height: 85px;
         background-color: $black;
@@ -51,7 +53,7 @@
         flex-wrap: wrap;
     }
     &-block{
-        width: calc(100% / 3);
+        width: calc(100% / var(--columns));
         display: flex;
         align-items: center;
         justify-content: center;
@@ -66,28 +68,32 @@
         }
     }
     @include maxw(1023px){
+        &-main{
+            --columns: 2;
+        }
         &-col{
-            width: calc(100% / 2);
             &:not(:last-child){
                 border-right: none;
             }
             &:nth-child(1), &:nth-child(2){
-                margin-bottom: 30px;
+                margin-bottom: var(--spacing);
             }
         }
     }
     @include maxw(767px){
+        &-main{
+            --columns: 1;
+        }
         &-col{
-            width: 100%;
             &:not(:last-child){
-                margin-bottom: 30px;
+                margin-bottom: var(--spacing);
             }
         }
         &-bottom{
+            --columns: 1;
             height: auto;
         }
         &-block{
-            width: 100%;
             padding: 15px 0;
         }
     }

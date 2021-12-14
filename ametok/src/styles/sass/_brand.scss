@@ -2,18 +2,24 @@
     padding: 120px 0;
     background-color: $white-smoke;
     &-main{
+        --columns: 5;
         display: flex;
         flex-wrap: wrap;
+        margin-left: calc(-1 * var(--spacing));
     }
     &-col{
-        width: calc(100% / 5);
+        width: calc(calc(100% / var(--columns)) - var(--spacing));
+        margin-left: var(--spacing);
+        margin-bottom: var(--spacing);
         display: flex;
         justify-content: center;
     }
     @include maxw(1023px) {
         padding: 50px 0;
+        &-main{
+            --columns: 1;
+        }
         &-col{
-            width: 100%;
             padding: 25px 0;
             justify-content: flex-start;
         }

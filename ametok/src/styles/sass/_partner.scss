@@ -7,20 +7,19 @@
     &-main {
         display: flex;
         flex-wrap: wrap;
+        --columns: 2;
     }
     &-col {
-        width: 50%;
+        width: calc(100% / var(--columns));
+        margin-bottom: var(--spacing);
         &:first-child {
             padding-right: 50px;
         }
     }
-    // .heading{
-    //     margin-bottom: 30px;
-    // }
     &-caption {
         font-size: 18px;
         line-height: lineH(36, 18);
-        margin-bottom: 30px;
+        margin-bottom: var(--spacing);
     }
     &-experience {
         font-size: 26px;
@@ -34,11 +33,11 @@
     }
     &-box {
         width: auto;
-        padding: 20px 30px;
+        padding: 20px var(--spacing);
         background-color: $white;
         box-shadow: 15px 10px 28px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.13);
-        margin-right: 30px;
-        margin-bottom: 30px;
+        margin-right: var(--spacing);
+        margin-bottom: var(--spacing);
         & > i {
             color: $yellow;
         }
@@ -47,27 +46,27 @@
         height: calc(calc(100% - 60px) - 40px);
         margin-bottom: 40px;
         position: relative;
-        & > img {
+        &__img {
             height: 100%;
             position: absolute;
+            &:nth-child(1){
+                z-index: 2;
+            }
+            &:nth-child(2){
+                height: 200px;
+                width: 250px;
+                top: -50px;
+                right: -70px;
+                z-index: 1;
+            }
+            &:nth-child(3){
+                height: 300px;
+                width: 320px;
+                bottom: -100px;
+                right: -150px;
+                z-index: 1;
+            }
         }
-    }
-    .img-1 {
-        z-index: 2;
-    }
-    .img-2 {
-        height: 200px;
-        width: 250px;
-        top: -50px;
-        right: -70px;
-        z-index: 1;
-    }
-    .img-3 {
-        height: 300px;
-        width: 320px;
-        bottom: -100px;
-        right: -150px;
-        z-index: 1;
     }
     &-contact {
         height: 60px;
@@ -103,33 +102,31 @@
         border-radius: 10px;
         padding: 1px;
         &:not(:last-child) {
-            margin-bottom: 30px;
+            margin-bottom: var(--spacing);
         }
         & > div {
-            background-color: orange;
+            background-color: $orange;
             width: 40%;
             height: 5px;
             border-radius: 10px;
         }
     }
     @include maxw(1499px) {
-        .img-2,
-        .img-3 {
-            display: none;
+        &-banner {
+            &__img {
+                position: relative;
+                width: 100%;
+                &:nth-child(2),
+                &:nth-child(3){
+                    display: none;
+                }
+            }
         }
     }
     @include maxw(1023px) {
         padding: 50px 0;
-        &-col {
-            width: 100%;
-            &:first-child {
-                margin-bottom: 30px;
-            }
-        }
-        &-banner {
-            & > img {
-                position: relative;
-            }
+        &-main {
+            --columns: 1;
         }
         &-caption {
             font-size: 16px;

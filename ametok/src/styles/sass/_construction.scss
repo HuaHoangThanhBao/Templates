@@ -5,11 +5,11 @@
     &-main {
         display: flex;
         flex-wrap: wrap;
-        gap: 30px;
-        justify-content: space-between;
+        margin-left: calc(-1 * var(--spacing));
     }
     &-link {
-        width: calc(calc(100% / 3) - 30px);
+        width: calc(calc(100% / var(--columns)) - var(--spacing));
+        margin-left: var(--spacing);
         position: relative;
     }
     &-overlay {
@@ -24,26 +24,25 @@
         opacity: 0;
     }
     &-detail {
-        padding: 30px;
+        padding: var(--spacing);
         position: absolute;
         top: 50%;
         left: 50%;
         width: 100%;
         transform: translate(-50%, -50%);
         text-align: center;
-
-        &.animation {
+        &.fadein {
             top: 80%;
             left: 50%;
             opacity: 0;
             transform: translate(-50%, -50%);
-            transition: all 0.3s ease-in-out 0s;
+            transition: 0.3s ease-in-out;
         }
     }
     &-link:hover &-overlay {
         opacity: 1;
     }
-    &-link:hover &-detail.animation {
+    &-link:hover &-detail.fadein {
         top: 50%;
         left: 50%;
         opacity: 1;
@@ -54,7 +53,10 @@
         font-size: 30px;
         line-height: lineH(34, 30);
         font-weight: bold;
-        margin-bottom: 30px;
+        margin-bottom: var(--spacing);
+        &.left{
+            text-align: left;
+        }
         &.center {
             margin: 0 auto;
         }
@@ -76,8 +78,10 @@
         background-color: $yellow;
         color: $white;
     }
-    @include minmax(767px, 1023px) {
+    @include maxw(1023px) {
         padding: 50px 0;
+    }
+    @include minmax(767px, 1023px) {
         &-heading {
             font-size: 20px;
         }
@@ -89,20 +93,17 @@
         }
     }
     @include maxw(767px) {
+        &-main{
+            --columns: 1
+        }
         &-link {
-            width: 100%;
-            &:last-child{
-                margin: 0;
-            }
+            margin-bottom: var(--spacing);
             & > img {
                 width: 100%;
             }
         }
         &-heading {
             max-width: none;
-        }
-        &-caption{
-            text-align: center;
         }
     }
 }

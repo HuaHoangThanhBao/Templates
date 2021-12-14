@@ -1,3 +1,8 @@
+:root{
+    --columns: 3;
+    --spacing: 30px;
+}
+
 body {
     font-family: $primary-font;
     font-size: 16px;
@@ -83,7 +88,11 @@ hr {
     width: 30px;
     height: 3px;
     background-color: $yellow;
+    margin: 0 auto;
     margin-bottom: 20px;
+    &-left{
+        margin-left: 0;
+    }
 }
 
 .title {
@@ -223,14 +232,21 @@ hr {
 }
 
 .news {
+    &-list{
+        --columns: 3;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        margin-left: calc(-1 * var(--spacing));
+    }
     &-item {
-        width: calc(calc(100% / 3) - 30px);
+        width: calc(calc(100% / var(--columns)) - var(--spacing));
+        margin-left: var(--spacing);
+        margin-bottom: var(--spacing);
         text-align: left;
         &.full-width {
             width: 100%;
-        }
-        &:last-child {
-            margin: 0;
+            margin-left: 0;
         }
     }
     &-top {
@@ -280,14 +296,8 @@ hr {
         text-align: justify;
     }
     @include maxw(1023px) {
-        &-item {
-            width: 100%;
-            &:not(:last-child) {
-                margin: 0 0 50px 0;
-            }
-            &:last-child {
-                margin: 0;
-            }
+        &-list{
+            --columns: 1;
         }
         &-top {
             margin-bottom: 0;

@@ -10,6 +10,7 @@
             width: 50%;
             & > img {
                 height: 100%;
+                width: 100%;
             }
         }
         &:last-child {
@@ -45,6 +46,7 @@
         width: calc(100% - 12px);
     }
 
+    /*Expert*/
     &-expert {
         text-align: center;
         .space {
@@ -53,15 +55,17 @@
         }
     }
     &-list {
+        --columns: 3;
         display: flex;
         flex-wrap: wrap;
-        gap: 30px;
         justify-content: space-between;
+        margin-left: calc(-1 * var(--spacing));
     }
     &-item {
-        width: calc(calc(100% / 3) - 30px);
+        width: calc(calc(100% / var(--columns)) - var(--spacing));
         position: relative;
-        & > img{
+        margin-left: var(--spacing);
+        & > img {
             width: 100%;
         }
     }
@@ -83,18 +87,19 @@
             color: $white;
         }
     }
-    &-name{
+    &-name {
         font-size: 22px;
         line-height: lineH(24, 22);
         font-weight: bold;
         margin-bottom: 10px;
     }
-    &-position{
+    &-position {
         font-size: 16px;
         line-height: lineH(24, 16);
         margin-bottom: 20px;
     }
-    &-name, &-position{
+    &-name,
+    &-position {
         overflow: hidden;
         text-overflow: ellipsis;
         display: -webkit-box;
@@ -102,34 +107,39 @@
         line-clamp: 1;
         -webkit-box-orient: vertical;
     }
-    @include maxw (1023px){
-        &-main{
+    /*End Expert*/
+
+    @include maxw(1023px) {
+        &-main {
             margin-bottom: 50px;
         }
-        &-col{
-            &:first-child, &:last-child{
+        &-col {
+            &:first-child,
+            &:last-child {
                 width: 100%;
             }
-            &:last-child{
-                margin: 30px 0 0 0;
+            &:last-child {
+                margin: var(--spacing) 0 0 0;
             }
         }
-        &-caption{
-            margin-bottom: 30px;
+        &-caption {
+            margin-bottom: var(--spacing);
             font-size: 24px;
         }
-        &-name{
+        &-name {
             font-size: 18px;
         }
-        &-position{
+        &-position {
             font-size: 15px;
         }
     }
-    @include maxw (767px){
-        &-item{
-            width: 100%;
-            &:last-child{
-                margin: 0;
+    @include maxw(767px) {
+        &-list{
+            --columns: 1;
+        }
+        &-item {
+            &:not(:last-child){
+                margin-bottom: var(--spacing);
             }
         }
     }

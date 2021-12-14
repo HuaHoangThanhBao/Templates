@@ -10,7 +10,8 @@
         margin-bottom: 70px;
     }
     &-col{
-        width: 50%;
+        --columns: 2;
+        width: calc(100% / var(--columns));
         &:last-child{
             padding: 50px 20px;
         }
@@ -21,12 +22,13 @@
         line-height: lineH(34, 18);
     }
     &-list{
+        --columns: 3;
         display: flex;
         flex-wrap: wrap;
         border: 2px solid black;
     }
     &-item{
-        width: calc(100% / 3);
+        width: calc(100% / var(--columns));
         background-color: white;
         padding: 75px 70px;
         position: relative;
@@ -81,13 +83,15 @@
             margin-bottom: 100px;
         }
         &-col{
-            width: 100%;
+            --columns: 1;
             &:last-child{
                 padding: 0;
             }
         }
+        &-list{
+            --columns: 1;
+        }
         &-item{
-            width: 100%;
             padding: 80px 20px;
         }
         &-description{
