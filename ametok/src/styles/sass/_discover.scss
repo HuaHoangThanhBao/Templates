@@ -37,25 +37,20 @@
         align-items: center;
         justify-content: center;
     }
-    &-btn{
-        padding: var(--spacing) 50px;
-        background-color: $black;
-        color: $white;
-        font-weight: bold;
-    }
     @include maxw (1023px){
         padding: 50px 0;
         &-col{
             &:first-child, &:last-child{
                 width: 100%;
                 flex-direction: column;
-                align-items: flex-start;
             }
             &:first-child{
-                margin-bottom: 50px;
+                margin-bottom: var(--spacing);
             }
         }
         &-heading{
+            max-width: 450px;
+            text-align: center;
             margin: 15px 0 0 0;
             font-size: 35px;
             width: 100%;

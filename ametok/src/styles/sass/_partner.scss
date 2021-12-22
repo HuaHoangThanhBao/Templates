@@ -23,6 +23,7 @@
     }
     &-experience {
         font-size: 26px;
+        font-weight: 600;
         line-height: lineH(46, 26);
         color: $yellow;
         margin-bottom: 25px;
@@ -32,14 +33,18 @@
         flex-wrap: wrap;
     }
     &-box {
+        font-size: 14px;
+        font-weight: 600;
         width: auto;
         padding: 20px var(--spacing);
         background-color: $white;
         box-shadow: 15px 10px 28px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.13);
-        margin-right: var(--spacing);
         margin-bottom: var(--spacing);
         & > i {
             color: $yellow;
+        }
+        &:first-child{
+            margin-right: var(--spacing);
         }
     }
     &-banner {

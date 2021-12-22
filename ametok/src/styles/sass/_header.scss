@@ -24,10 +24,11 @@
             flex-wrap: wrap;
             justify-content: flex-end;
             align-items: center;
+            margin-left: -50px;
         }
     }
     &-link {
-        margin-right: 50px;
+        margin-left: 50px;
         &:nth-child(6) {
             margin: 0;
         }

@@ -19,6 +19,7 @@
         }
     }
     &-caption {
+        font-weight: 600;
         font-size: 26px;
         line-height: lineH(34, 26);
         color: $yellow;
@@ -34,13 +35,17 @@
         margin-bottom: 15px;
     }
     &-icon {
-        padding: 12px;
+        @include size(36px, 36px);
         color: $yellow;
         margin-right: 15px;
         background-color: $white-smoke;
-        display: flex;
-        justify-content: center;
-        align-items: center;
+        position: relative;
+        i{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
     }
     &-txt {
         width: calc(100% - 12px);
@@ -71,9 +76,9 @@
     }
     &-contact {
         position: absolute;
-        bottom: -85px;
+        bottom: -90px;
         z-index: 2;
-        padding: 25px 10px;
+        padding: 30px 10px;
         left: 40px;
         right: 40px;
         color: $black;

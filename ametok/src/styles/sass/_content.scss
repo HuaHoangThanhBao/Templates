@@ -19,7 +19,7 @@
     }
     /*Override*/
     .send {
-        padding: 30px 50px;
+        padding: 20px 30px;
         & > i {
             font-size: 25px;
             color: $white;
@@ -137,6 +137,7 @@
         &__col {
             width: 50%;
             display: flex;
+            align-items: center;
             flex-wrap: wrap;
             &:first-child {
                 gap: 10px;
@@ -148,10 +149,16 @@
         .content-heading {
             margin-right: 10px;
         }
-        &__btn {
-            padding: 15px 20px;
+        &__tag {
+            height: 35px;
+            width: 110px;
+            font-size: 14px;
+            font-weight: 600;
             background-color: $yellow;
             color: $white;
+            &:hover{
+                background-color: $black;
+            }
         }
     }
     &-comment {
@@ -223,7 +230,7 @@
         }
     }
     &-info {
-        padding: 60px 50px;
+        padding: var(--spacing) 50px;
         background-color: $white;
         border-top: 7px solid $yellow;
         width: 370px;
@@ -371,8 +378,8 @@
             appearance: none;
             position: relative;
             display: flex;
-            width: 340px;
-            height: 80px;
+            width: 250px;
+            height: 60px;
             overflow: hidden;
             select {
                 background-color: $white-smoke;
@@ -384,9 +391,9 @@
             &::after {
                 content: "\25BC";
                 position: absolute;
-                top: 0;
-                right: 0;
-                padding: 30px;
+                top: 50%;
+                right: 20px;
+                transform: translateY(-50%);
                 transition: 0.25s all ease;
                 pointer-events: none;
             }
@@ -407,8 +414,9 @@
             font-size: 40px;
             color: $black;
             font-weight: bold;
-            display: inline;
+            display: inline-block;
             margin-right: 15px;
+            margin-bottom: 15px;
         }
         &__price {
             font-size: 20px;
@@ -417,7 +425,7 @@
             font-weight: bold;
         }
         &__review {
-            padding: 30px 0;
+            margin: 15px 0 30px 0;
         }
         .stars{
             margin-right: 10px;
@@ -427,29 +435,30 @@
         }
         &__description {
             text-align: justify;
-            padding: 15px 0;
+            margin-top: 20px;
         }
         &__detail {
-            padding: 40px 0 20px 0;
+            padding: 30px 0;
+        }
+        &__id{
+            margin-bottom: 20px;
         }
         &__quantity {
-            display: flex;
-            flex-wrap: wrap;
-            align-items: center;
             margin-bottom: 30px;
         }
-        &__txt {
-            &.highlight {
-                font-weight: bold;
+        &__txt{
+            &.text--strong{
                 color: $black;
             }
         }
         &__block {
+            display: flex;
+            float: left;
             width: 90px;
             height: 60px;
-            display: flex;
             border: 2px solid $very-light-grey;
-            margin-left: 20px;
+            margin-right: 20px;
+            margin-bottom: 20px;
         }
         &__inp {
             width: 60px;
@@ -499,6 +508,7 @@
             display: flex;
             flex-wrap: wrap;
             align-items: center;
+            margin-bottom: 20px;
             .social > a{
                 padding: 10px;
             }

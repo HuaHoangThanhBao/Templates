@@ -12,6 +12,15 @@
         margin-left: var(--spacing);
         position: relative;
     }
+    &-two-columns{
+        --columns: 2;
+    }
+    &-two-columns &-link{
+        margin-bottom: var(--spacing);
+    }
+    &-img{
+        width: 100%;
+    }
     &-overlay {
         background: rgba(0, 0, 0, 0.7);
         position: absolute;
@@ -78,6 +87,8 @@
         background-color: $yellow;
         color: $white;
     }
+    &-load-more{
+    }
     @include maxw(1023px) {
         padding: 50px 0;
     }
@@ -100,6 +111,9 @@
             margin-bottom: var(--spacing);
             & > img {
                 width: 100%;
+            }
+            &:last-child{
+                margin-bottom: 0;
             }
         }
         &-heading {

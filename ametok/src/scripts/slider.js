@@ -100,10 +100,10 @@ Carousel.prototype.renderNewsCarousel = function(){
                     <a>
                         <img src="${this.folder}/${item.image}" alt="" class="news-img">
                     </a>
-                    <div class="news-time">
+                    <a class="news-time">
                         <p class="news-day">${item.day}</p>
                         <div class="news-month">${item.month}</div>
-                    </div>
+                    </a>
                 </div>
                 <div class="news-body">
                     <a>

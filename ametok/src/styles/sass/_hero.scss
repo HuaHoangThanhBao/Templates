@@ -39,34 +39,34 @@
         font-weight: bold;
         margin-bottom: 20px;
     }
-    &-txt {
-        font-size: 20px;
-        line-height: lineH(40, 20);
-        color: $white;
+    &-row {
         display: flex;
         align-items: center;
-
         & > i {
             color: $yellow;
             font-size: 12px;
             margin-right: 12px;
         }
     }
-    &-btn {
-        padding: var(--spacing) 60px;
-        margin-top: 40px;
-        background-color: $yellow;
+    &-txt{
+        font-size: 20px;
+        line-height: lineH(40, 20);
         color: $white;
-        font-size: 18px;
-        font-weight: bold;
+    }
+    &-btn {
+        margin-top: 40px;
     }
     &-arrow {
         width: 50%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        padding: 35px;
+        @include size(94px, 84px);
         font-size: 25px;
+        position: relative;
+        i{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
         &.arrow-left {
             background-color: $yellow;
             color: $white;

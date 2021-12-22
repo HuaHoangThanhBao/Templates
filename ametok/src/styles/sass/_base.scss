@@ -42,11 +42,29 @@ select {
     cursor: pointer;
     outline: none;
     border: none;
-    padding: 15px 50px;
-    border-radius: 40px;
+    //padding: 15px 50px;
+    //border-radius: 40px;
     background-color: inherit;
     font-weight: bold;
     font-size: 16px;
+    padding: 22px 60px;
+    &--black{
+        background-color: $black;
+        color: $white;
+    }
+    &--yellow{
+        background-color: $yellow;
+        color: $white;
+    }
+    &--search{
+        color: $white;
+    }
+}
+
+.sybmol{
+    &-pad-left{
+        padding-left: 5px;
+    }
 }
 
 a {
@@ -80,6 +98,10 @@ hr {
     font-size: 12px;
 }
 
+.text--strong{
+    font-weight: bold;
+}
+
 .highlight {
     color: $yellow;
 }
@@ -102,17 +124,13 @@ hr {
 
 .heading {
     font-size: 50px;
-    line-height: lineH(70, 50);
+    line-height: lineH(60, 50);
     color: $black;
-    font-weight: bold;
+    font-weight: 600;
     margin-bottom: 40px;
-    &.white {
+    &--white {
         color: $white;
     }
-}
-
-.heading--white {
-    color: $white;
 }
 
 .icon {
@@ -248,6 +266,10 @@ hr {
             margin-left: 0;
         }
     }
+    &-item:hover &-time{
+        background-color: $yellow;
+        color: $white;
+    }
     &-top {
         position: relative;
         margin-bottom: var(--spacing);
@@ -262,10 +284,6 @@ hr {
         left: 22px;
         background-color: $white;
         color: $black;
-        &.yellow {
-            background-color: $yellow;
-            color: $white;
-        }
     }
     &-day,
     &-month {
