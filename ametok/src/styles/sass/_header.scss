@@ -40,6 +40,21 @@
     &-cart {
         margin-left: var(--spacing);
         font-size: 28px;
+        position: relative;
+        &__amount{
+            position: absolute;
+            right: -10px;
+            top: calc(50% - 18px);
+            width: 18px;
+            height: 18px;
+            line-height: 16px;
+            font-size: 11px;
+            display: block;
+            border-radius: 50%;
+            text-align: center;
+            background-color: $yellow;
+            color: $white;
+        }
     }
     &-burger {
         display: none;

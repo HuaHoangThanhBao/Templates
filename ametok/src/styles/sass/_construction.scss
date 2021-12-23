@@ -87,8 +87,6 @@
         background-color: $yellow;
         color: $white;
     }
-    &-load-more{
-    }
     @include maxw(1023px) {
         padding: 50px 0;
     }

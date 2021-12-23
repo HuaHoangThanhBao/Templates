@@ -1,0 +1,106 @@
+.contact{
+    padding: 120px 0;
+    &-main{
+        text-align: center;
+        margin-bottom: 50px;
+    }
+    &-list{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        --columns: 4;
+    }
+    &-item{
+        width: calc(100% / var(--columns));
+        margin-bottom: var(--spacing);
+        text-align: left;
+        padding: 40px;
+    }
+    &-item:hover{
+        background-color: $yellow;
+    }
+    &-item:hover &-location, &-item:hover &-desc, &-item:hover &-mail, &-item:hover &-phone{
+        color: white;
+    }
+    &-location{
+        font-size: 26px;
+        font-weight: bold;
+        margin-bottom: var(--spacing);
+        color: $very-dark-black;
+    }
+    &-img{
+        width: 100%;
+    }
+    &-block{
+        background-color: $yellow;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        color: $white;
+        padding: var(--spacing);
+    }
+    &-icon{
+        margin-right: var(--spacing);
+    }
+    /*Welcome*/
+    &-welcome{
+        display: flex;
+        flex-wrap: wrap;
+        --columns: 2;
+        margin-left: calc(-2 * var(--spacing));
+    }
+    &-col{
+        width: calc(calc(100% / var(--columns)) - calc(var(--spacing) * 2));
+        margin-left: calc(var(--spacing) * 2);
+    }
+    &-caption{
+        margin-bottom: var(--spacing);
+    }
+    &-form{
+        height: 100%;
+        border-top: 8px solid $strong-yellow;
+        background-color: $white;
+        box-shadow: 0px 0px 60px 10px rgb(0 0 0 / 7%);
+        padding: 50px;
+    }
+    &-inp, &-select, &-textarea{
+        width: 100%;
+        display: block;
+        background-color: $white-smoke;
+        padding: 25px 30px;
+        margin-bottom: 10px;
+    }
+    &-textarea{
+        height: 120px;
+    }
+    &-btn{
+        width: 100%;
+        padding-left: 0;
+        padding-right: 0;
+    }
+    @include maxw(1023px){
+        padding: 50px 0;
+        &-list{
+            --columns: 2;
+        }
+        &-item{
+            text-align: center;
+        }
+        &-welcome{
+            --columns: 1;
+        }
+        &-col{
+            &:first-child{
+                margin-bottom: 60px;
+            }
+        }
+    }
+    @include maxw(767px){
+        &-list{
+            --columns: 1;
+        }
+        &-form{
+            padding: var(--spacing);
+        }
+    }
+}

@@ -711,15 +711,110 @@ hr {
   }
 }
 
-.news {
+.contact {
   padding: 120px 0;
+  /*Welcome*/
 }
-.news-main {
+.contact-main {
   text-align: center;
+  margin-bottom: 50px;
+}
+.contact-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  --columns: 4;
+}
+.contact-item {
+  width: calc(100% / var(--columns));
+  margin-bottom: var(--spacing);
+  text-align: left;
+  padding: 40px;
+}
+.contact-item:hover {
+  background-color: #fcb222;
+}
+.contact-item:hover .contact-location, .contact-item:hover .contact-desc, .contact-item:hover .contact-mail, .contact-item:hover .contact-phone {
+  color: white;
+}
+.contact-location {
+  font-size: 26px;
+  font-weight: bold;
+  margin-bottom: var(--spacing);
+  color: #171717;
+}
+.contact-img {
+  width: 100%;
+}
+.contact-block {
+  background-color: #fcb222;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  color: #ffffff;
+  padding: var(--spacing);
+}
+.contact-icon {
+  margin-right: var(--spacing);
+}
+.contact-welcome {
+  display: flex;
+  flex-wrap: wrap;
+  --columns: 2;
+  margin-left: calc(-2 * var(--spacing));
+}
+.contact-col {
+  width: calc(100% / var(--columns) - var(--spacing) * 2);
+  margin-left: calc(var(--spacing) * 2);
+}
+.contact-caption {
+  margin-bottom: var(--spacing);
+}
+.contact-form {
+  height: 100%;
+  border-top: 8px solid #e6a422;
+  background-color: #ffffff;
+  box-shadow: 0px 0px 60px 10px rgba(0, 0, 0, 0.07);
+  padding: 50px;
+}
+.contact-inp, .contact-select, .contact-textarea {
+  width: 100%;
+  display: block;
+  background-color: #f6f6f6;
+  padding: 25px 30px;
+  margin-bottom: 10px;
+}
+.contact-textarea {
+  height: 120px;
+}
+.contact-btn {
+  width: 100%;
+  padding-left: 0;
+  padding-right: 0;
 }
 @media screen and (max-width: 1023px) {
-  .news {
+  .contact {
     padding: 50px 0;
+  }
+  .contact-list {
+    --columns: 2;
+  }
+  .contact-item {
+    text-align: center;
+  }
+  .contact-welcome {
+    --columns: 1;
+  }
+  .contact-col:first-child {
+    margin-bottom: 60px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .contact-list {
+    --columns: 1;
+  }
+  .contact-form {
+    padding: var(--spacing);
   }
 }
 
@@ -826,4 +921,4 @@ hr {
   }
 }
 
-/*# sourceMappingURL=blog.css.map */
+/*# sourceMappingURL=contact.css.map */
