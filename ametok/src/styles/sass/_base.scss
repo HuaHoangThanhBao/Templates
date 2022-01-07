@@ -94,12 +94,16 @@ hr {
     border: 1px solid $white-smoke;
 }
 
-.text--small {
-    font-size: 12px;
-}
-
-.text--strong{
-    font-weight: bold;
+.text {
+    &--small{
+        font-size: 12px;
+    }
+    &--strong{
+        font-weight: bold;
+    }
+    &--center{
+        text-align: center;
+    }
 }
 
 .highlight {

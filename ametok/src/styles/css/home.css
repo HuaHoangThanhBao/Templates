@@ -138,9 +138,11 @@ hr {
 .text--small {
   font-size: 12px;
 }
-
 .text--strong {
   font-weight: bold;
+}
+.text--center {
+  text-align: center;
 }
 
 .highlight {
@@ -981,9 +983,6 @@ hr {
 .project {
   padding: 120px 0;
 }
-.project-main {
-  text-align: center;
-}
 .project-list {
   --columns: 4;
   display: flex;
@@ -1264,9 +1263,6 @@ hr {
 .team-txt {
   width: calc(100% - 12px);
 }
-.team-expert {
-  text-align: center;
-}
 .team-expert .space {
   margin: 0 auto;
   margin-bottom: 20px;
@@ -1316,6 +1312,7 @@ hr {
   margin-bottom: 20px;
 }
 .team-name, .team-position {
+  text-align: center;
   overflow: hidden;
   text-overflow: ellipsis;
   display: -webkit-box;
@@ -1463,9 +1460,6 @@ hr {
 
 .news {
   padding: 120px 0;
-}
-.news-main {
-  text-align: center;
 }
 @media screen and (max-width: 1023px) {
   .news {
