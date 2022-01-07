@@ -1,0 +1,280 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cart</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./styles/css/checkout.css">
+</head>
+
+<body>
+    <section class="top">
+        <div class="container">
+            <div class="top-main">
+                <div class="top-col">
+                    <div class="social black">
+                        <a><i class="fa fa-twitter"></i></a>
+                        <a><i class="fa fa-facebook"></i></a>
+                        <a><i class="fa fa-linkedin"></i></a>
+                        <a><i class="fa fa-instagram"></i></a>
+                    </div>
+                    <p class="top-txt">
+                        Welcome to Construction Company. <span class="highlight">Get Free Quote</span>
+                    </p>
+                </div>
+                <div class="top-col">
+                    <p class="top-email top-txt">
+                        <i class="fa fa-envelope"></i>
+                        needhelp@company.com
+                    </p>
+                    <p class="top-time top-txt">
+                        <i class="fa fa-clock-o"></i>
+                        Mon - Sat 8:00 - 6:30, Sunday - CLOSED
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <header id="header" class="header">
+        <div class="container">
+            <div class="header-main">
+                <div class="header-col">
+                    <a href="index.html"><img src="./images/Logo.png" alt=""></a>
+                </div>
+                <div class="header-col">
+                    <a href="index.html" class="header-link">Home</a>
+                    <a href="shop.html" class="header-link">Shop</a>
+                    <a href="projects.html" class="header-link">Projects</a>
+                    <a href="blog.html" class="header-link">News</a>
+                    <a href="contact.html" class="header-link">Contact</a>
+                    <a id="header-burger" class="header-link header-burger">
+                        <svg viewBox="0 0 100 80" width="40" height="40">
+                            <rect width="100" height="15"></rect>
+                            <rect y="30" width="100" height="15"></rect>
+                            <rect y="60" width="100" height="15"></rect>
+                        </svg>
+                    </a>
+                    <a href="#" class="header-search">
+                        <i class="fa fa-search"></i>
+                    </a>
+                    <a href="#" class="header-cart">
+                        <i class="fa fa-shopping-cart"></i>
+                        <span class="header-cart__amount">10</span>
+                    </a>
+                    <a class="header-link header-phone">
+                        <div class="header-call-icon">
+                            <img src="./images/call-icon.png" alt="">
+                        </div>
+                        <div class="header-call">
+                            <p class="header-txt text--small">Call Anytime</p>
+                            <p class="header-txt bold">92 666 888 0000</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div id="header-menu" class="header-menu">
+            <div class="container">
+                <div class="header-menu-main">
+                    <a href="index.html" class="header-opt">Home</a>
+                    <a href="shop.html" class="header-opt">Shop</a>
+                    <a href="projects.html" class="header-opt">Projects</a>
+                    <a href="blog.html" class="header-opt">News</a>
+                    <a href="contact.html" class="header-opt">Contact</a>
+                </div>
+            </div>
+        </div>
+    </header>
+    <section id="hero" class="hero blog">
+        <div class="container">
+            <div class="hero-main">
+                <div class="hero-col">
+                    <h1 class="heading heading--white">
+                        Cart
+                    </h1>
+                </div>
+                <div class="hero-col breadcum">
+                    <div class="hero-breadcum text--strong">
+                        Home / Cart
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="cart">
+        <div class="container">
+            <div class="cart-main">
+                <table class="cart-table">
+                    <thead class="cart-table__thead">
+                        <tr class="cart-table__trow">
+                            <th>Remove</th>
+                            <th>Image</th>
+                            <th>Product</th>
+                            <th>Price</th>
+                            <th>Quantity</th>
+                            <th>Total</th>
+                        </tr>
+                    </thead>
+                    <tbody class="cart-table__tbody">
+                        <tr class="cart-table__trow">
+                            <td class="product-remove">
+                                <button class="cart-remove">
+                                    <i class="fa fa-trash"></i>
+                                </button>
+                            </td>
+                            <td class="product-img">
+                                <a href="#">
+                                    <img src="./images/shop-1.png" alt="" class="cart-img-review">
+                                </a>
+                            </td>
+                            <td class="product-name">
+                                <p class="cart-txt">Blue Dress For Woman</p>
+                            </td>
+                            <td class="product-price">
+                                <p class="cart-txt">$98</p>
+                            </td>
+                            <td class="product-quantity">
+                                <input class="cart-quantity" type="number" min="1" value="1" />
+                            </td>
+                            <td class="product-total">
+                                <p class="cart-txt">$98</p>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="cart-detail">
+                <div class="cart-col">
+                    <div class="cart-heading">Coupon</div>
+                    <div class="cart-body">
+                        <p class="cart-desc">Enter your coupon if you have one.</p>
+                        <div class="cart-row no-flex">
+                            <input type="text" class="cart-coupon" placeholder="Coupon code">
+                            <button class="btn btn--black apply-coupon">Apply coupon</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="cart-col">
+                    <div class="cart-heading">Cart Total</div>
+                    <div class="cart-body">
+                        <div class="cart-row">
+                            <p class="cart-txt">Subtotal</p>
+                            <p class="cart-txt">$139.2</p>
+                        </div>
+                        <div class="cart-row">
+                            <p class="cart-txt">Shipping</p>
+                            <p class="cart-txt">$25.00</p>
+                        </div>
+                        <hr>
+                        <div class="cart-row">
+                            <p class="cart-txt">Total</p>
+                            <p class="cart-txt">$164.2</p>
+                        </div>
+                        <div class="cart-row">
+                            <button class="btn btn--black proceed-to-checkout">Proceed to checkout</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="footer">
+        <div class="footer-top">
+            <div class="container">
+                <div class="footer-main">
+                    <div class="footer-col">
+                        <h5 class="footer-heading">
+                            About
+                        </h5>
+                        <p class="footer-txt">
+                            There are many variations of simple lorem ipsum available for not, but the majority have
+                            suffered alteration.
+                        </p>
+                        <button class="footer-btn">
+                            Request a Quote
+                        </button>
+                    </div>
+                    <div class="footer-col">
+                        <h5 class="footer-heading">
+                            Links
+                        </h5>
+                        <a class="footer-txt inline">
+                            About Us
+                        </a>
+                        <a class="footer-txt inline">
+                            Meet Our Team
+                        </a>
+                        <a class="footer-txt inline">
+                            News & Media
+                        </a>
+                        <a class="footer-txt inline">
+                            Our Projects
+                        </a>
+                        <a class="footer-txt inline">
+                            Contacts
+                        </a>
+                    </div>
+                    <div class="footer-col">
+                        <h5 class="footer-heading">
+                            Contact
+                        </h5>
+                        <p class="footer-txt br-bt">
+                            <i class="fa fa-location-arrow"></i>
+                            88 Broklyn Golden Street, New York
+                        </p>
+                        <p class="footer-txt br-bt">
+                            <i class="fa fa-clock-o"></i>
+                            Mon - Sat 8:00 - 6:30, Sunday - CLOSED
+                        </p>
+                        <p class="footer-txt br-bt">
+                            <i class="fa fa-envelope"></i>
+                            needhelp@company.com
+                        </p>
+                        <p class="footer-txt br-bt">
+                            <i class="fa fa-phone"></i>
+                            92 666 888 0000
+                        </p>
+                    </div>
+                    <div class="footer-col">
+                        <h5 class="footer-heading">
+                            Newsletter
+                        </h5>
+                        <p class="footer-txt">
+                            There are many variations of simple lorem ipsum available for not.
+                        </p>
+                        <div class="send">
+                            <input type="text" class="send-inp" placeholder="Email Address">
+                            <i class="fa fa-arrow-right"></i>
+                        </div>
+                        <div class="social footer">
+                            <a><i class="fa fa-twitter"></i></a>
+                            <a><i class="fa fa-facebook"></i></a>
+                            <a><i class="fa fa-linkedin"></i></a>
+                            <a><i class="fa fa-instagram"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container">
+                <div class="footer-main space-between">
+                    <p class="text--small">
+                        © All Copyright 2020 by Company.com
+                    </p>
+                    <p class="text--small">
+                        Terms & Conditions / Privacy Policy / Sitemap
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script src="./scripts/header.js"></script>
+</body>
+
+</html>

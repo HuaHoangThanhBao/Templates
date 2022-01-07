@@ -1,0 +1,123 @@
+.cart{
+    padding: 50px 0;
+    &-main{
+        overflow-x: auto;
+    }
+    &-table{
+        width: 100%;
+        border-collapse: collapse;
+        &__thead{
+            background-color: $yellow;
+            color: $white;
+            th{
+                padding: 10px;
+            }
+        }
+        &__tbody{
+            td{
+                border: 1px solid $very-light-grey;
+                text-align: center;
+                padding: 10px;
+            }
+            .product-remove{
+                min-width: 100px;
+            }
+            .product-img{
+                min-width: 180px;
+            }
+            .product-name{
+                min-width: 180px;
+            }
+            .product-price{
+                min-width: 130px;
+            }
+            .product-quantity{
+                min-width: 130px;
+            }
+            .product-total{
+                min-width: 180px;
+            }
+        }
+    }
+    &-remove{
+        font-size: 20px;
+    }
+    &-img-review{
+        height: 92px;
+        width: 92px;
+        object-fit: cover;
+        margin: 0 auto;
+    }
+    &-quantity{
+        height: 40px;
+        width: 60px;
+        border: 1px solid $very-light-grey;
+        text-align: center;
+    }
+    &-txt{
+        font-size: 17px;
+        color: $black;
+    }
+
+    /*Detail*/
+    &-detail{
+        margin-top: 80px;
+        display: flex;
+        flex-wrap: wrap;
+        --columns: 2;
+        margin-left: calc(-1 * var(--spacing));
+    }
+    &-col{
+        width: calc(calc(100% / var(--columns)) - var(--spacing));
+        margin-left: var(--spacing);
+    }
+    &-heading{
+        background-color: $yellow;
+        color: $white;
+        padding: 20px;
+        text-transform: uppercase;
+        font-weight: bold;
+    }
+    &-body{
+        border: 1px solid $very-light-grey;
+        padding: 20px;
+    }
+    &-row{
+        padding: 5px 0;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        &.no-flex{
+            display: block;
+        }
+    }
+    &-desc{
+        font-size: 15px;
+        margin-bottom: 10px;
+    }
+    &-coupon{
+        border: 1px solid $very-light-grey;
+        padding: 10px 20px;
+        margin-right: 20px;
+        margin-bottom: 10px;
+    }
+    .btn{
+        padding: 10px 20px;
+        font-weight: 400;
+    }
+    .proceed-to-checkout{
+        margin-left: auto;
+    }
+    /*End Detail*/
+
+    @include maxw(768px){
+        &-detail{
+            --columns: 1;
+        }
+        &-col{
+            &:first-child{
+                margin-bottom: var(--spacing);
+            }
+        }
+    }
+}
