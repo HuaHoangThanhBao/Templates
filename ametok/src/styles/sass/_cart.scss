@@ -2,6 +2,7 @@
     padding: 50px 0;
     &-main{
         overflow-x: auto;
+        margin-bottom: 80px;
     }
     &-table{
         width: 100%;
@@ -61,7 +62,6 @@
 
     /*Detail*/
     &-detail{
-        margin-top: 80px;
         display: flex;
         flex-wrap: wrap;
         --columns: 2;
@@ -109,6 +109,68 @@
         margin-left: auto;
     }
     /*End Detail*/
+
+    /*Billing*/
+    &--bill{
+        padding: var(--spacing);
+        box-shadow: 0px 0px 60px 10px rgb(0 0 0 / 7%);
+        &.mar-bot{
+            margin-bottom: var(--spacing);
+        }
+        &__title{
+            font-size: 30px;
+            font-weight: bold;
+            line-height: lineH(60, 30);
+            color: $black;
+        }
+        &__space{
+            height: 2px;
+            background-color: $yellow;
+            margin-bottom: 20px;
+        }
+        &__row{
+            padding: 20px 0;
+            &.flex{
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-between;
+                margin-left: calc(-1 * var(--spacing));
+                --columns: 2;
+            }
+            &.small{
+                padding: 10px 0;
+            }
+        }
+        &__row.flex &__col{
+            width: calc(calc(100% / var(--columns)) - var(--spacing));
+            margin-left: var(--spacing);
+        }
+        &__label{
+            font-weight: bold;
+            color: $black;
+            text-transform: capitalize;
+        }
+        &__inp{
+            border: 1px solid $very-light-grey;
+            width: 100%;
+            margin-top: 10px;
+            padding: 10px;
+        }
+        &__select, &__textarea{
+            border: 1px solid $very-light-grey;
+            display: block;
+            width: 100%;
+            padding: 10px;
+            margin-top: 10px;
+        }
+        &__txt{
+            padding: 5px 0;
+        }
+        &__place-order{
+            margin-top: var(--spacing);
+        }
+    }
+    /*End Billing*/
 
     @include maxw(768px){
         &-detail{

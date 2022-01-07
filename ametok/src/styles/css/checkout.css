@@ -717,9 +717,12 @@ hr {
   padding: 50px 0;
   /*Detail*/
   /*End Detail*/
+  /*Billing*/
+  /*End Billing*/
 }
 .cart-main {
   overflow-x: auto;
+  margin-bottom: 80px;
 }
 .cart-table {
   width: 100%;
@@ -775,7 +778,6 @@ hr {
   color: #232323;
 }
 .cart-detail {
-  margin-top: 80px;
   display: flex;
   flex-wrap: wrap;
   --columns: 2;
@@ -821,6 +823,65 @@ hr {
 }
 .cart .proceed-to-checkout {
   margin-left: auto;
+}
+.cart--bill {
+  padding: var(--spacing);
+  box-shadow: 0px 0px 60px 10px rgba(0, 0, 0, 0.07);
+}
+.cart--bill.mar-bot {
+  margin-bottom: var(--spacing);
+}
+.cart--bill__title {
+  font-size: 30px;
+  font-weight: bold;
+  line-height: 2;
+  color: #232323;
+}
+.cart--bill__space {
+  height: 2px;
+  background-color: #fcb222;
+  margin-bottom: 20px;
+}
+.cart--bill__row {
+  padding: 20px 0;
+}
+.cart--bill__row.flex {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-left: calc(-1 * var(--spacing));
+  --columns: 2;
+}
+.cart--bill__row.small {
+  padding: 10px 0;
+}
+.cart--bill__row.flex .cart--bill__col {
+  width: calc(100% / var(--columns) - var(--spacing));
+  margin-left: var(--spacing);
+}
+.cart--bill__label {
+  font-weight: bold;
+  color: #232323;
+  text-transform: capitalize;
+}
+.cart--bill__inp {
+  border: 1px solid #e1e1e1;
+  width: 100%;
+  margin-top: 10px;
+  padding: 10px;
+}
+.cart--bill__select, .cart--bill__textarea {
+  border: 1px solid #e1e1e1;
+  display: block;
+  width: 100%;
+  padding: 10px;
+  margin-top: 10px;
+}
+.cart--bill__txt {
+  padding: 5px 0;
+}
+.cart--bill__place-order {
+  margin-top: var(--spacing);
 }
 @media screen and (max-width: 768px) {
   .cart-detail {
